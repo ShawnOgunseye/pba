@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500">
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#2563eb"/>
+    </marker>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="800" height="500" fill="#f8fafc"/>
+  
+  <!-- Title -->
+  <text x="400" y="35" font-family="Arial, sans-serif" font-size="20" font-weight="bold" text-anchor="middle" fill="#1e293b">Drivers of Business Change</text>
+  
+  <!-- Main Process Box -->
+  <rect x="280" y="180" width="240" height="120" rx="8" fill="#3b82f6" stroke="#1d4ed8" stroke-width="2"/>
+  <text x="400" y="225" font-family="Arial, sans-serif" font-size="16" font-weight="bold" text-anchor="middle" fill="white">PROCESS</text>
+  <text x="400" y="250" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="white">(Transform inputs</text>
+  <text x="400" y="268" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="white">into outputs)</text>
+  
+  <!-- Input Box -->
+  <rect x="60" y="200" width="120" height="80" rx="8" fill="#10b981" stroke="#059669" stroke-width="2"/>
+  <text x="120" y="245" font-family="Arial, sans-serif" font-size="14" font-weight="bold" text-anchor="middle" fill="white">INPUT</text>
+  
+  <!-- Output Box -->
+  <rect x="620" y="200" width="120" height="80" rx="8" fill="#f59e0b" stroke="#d97706" stroke-width="2"/>
+  <text x="680" y="245" font-family="Arial, sans-serif" font-size="14" font-weight="bold" text-anchor="middle" fill="white">OUTPUT</text>
+  
+  <!-- Arrows -->
+  <line x1="180" y1="240" x2="270" y2="240" stroke="#2563eb" stroke-width="3" marker-end="url(#arrowhead)"/>
+  <line x1="520" y1="240" x2="610" y2="240" stroke="#2563eb" stroke-width="3" marker-end="url(#arrowhead)"/>
+  
+  <!-- External Forces -->
+  <!-- Suppliers (left) -->
+  <rect x="60" y="80" width="100" height="50" rx="6" fill="#e0e7ff" stroke="#6366f1" stroke-width="2"/>
+  <text x="110" y="110" font-family="Arial, sans-serif" font-size="12" font-weight="bold" text-anchor="middle" fill="#4338ca">Suppliers</text>
+  <line x1="110" y1="130" x2="300" y2="180" stroke="#6366f1" stroke-width="2" stroke-dasharray="5,3"/>
+  
+  <!-- Customers (right) -->
+  <rect x="640" y="80" width="100" height="50" rx="6" fill="#e0e7ff" stroke="#6366f1" stroke-width="2"/>
+  <text x="690" y="110" font-family="Arial, sans-serif" font-size="12" font-weight="bold" text-anchor="middle" fill="#4338ca">Customers</text>
+  <line x1="690" y1="130" x2="500" y2="180" stroke="#6366f1" stroke-width="2" stroke-dasharray="5,3"/>
+  
+  <!-- Competitors (top) -->
+  <rect x="350" y="70" width="100" height="50" rx="6" fill="#fce7f3" stroke="#ec4899" stroke-width="2"/>
+  <text x="400" y="100" font-family="Arial, sans-serif" font-size="12" font-weight="bold" text-anchor="middle" fill="#be185d">Competitors</text>
+  <line x1="400" y1="120" x2="400" y2="175" stroke="#ec4899" stroke-width="2" stroke-dasharray="5,3"/>
+  
+  <!-- Technology (bottom left) -->
+  <rect x="180" y="360" width="100" height="50" rx="6" fill="#d1fae5" stroke="#10b981" stroke-width="2"/>
+  <text x="230" y="390" font-family="Arial, sans-serif" font-size="12" font-weight="bold" text-anchor="middle" fill="#047857">Technology</text>
+  <line x1="230" y1="360" x2="320" y2="300" stroke="#10b981" stroke-width="2" stroke-dasharray="5,3"/>
+  
+  <!-- Regulations (bottom right) -->
+  <rect x="520" y="360" width="100" height="50" rx="6" fill="#fef3c7" stroke="#f59e0b" stroke-width="2"/>
+  <text x="570" y="390" font-family="Arial, sans-serif" font-size="12" font-weight="bold" text-anchor="middle" fill="#b45309">Regulations</text>
+  <line x1="570" y1="360" x2="480" y2="300" stroke="#f59e0b" stroke-width="2" stroke-dasharray="5,3"/>
+  
+  <!-- Legend -->
+  <rect x="50" y="440" width="700" height="45" rx="6" fill="#f1f5f9" stroke="#cbd5e1" stroke-width="1"/>
+  <text x="400" y="468" font-family="Arial, sans-serif" font-size="11" text-anchor="middle" fill="#475569">External forces (dashed lines) constantly pressure businesses to adapt, improve, and transform.</text>
+</svg>

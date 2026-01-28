@@ -1,0 +1,849 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.8.25">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>9&nbsp; Modeling Exercises – Practical Business Analysis</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<link href="../chapters/10-ba-ai.html" rel="next">
+<link href="../chapters/08-agile-scrum.html" rel="prev">
+<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-7b89279ff1a6dce999919e0e67d4d9ec.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-70a47bd5681a7291082a5b9f83d58762.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+
+</head>
+
+<body class="nav-sidebar floating quarto-light">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../chapters/09-modeling-exercises.html">Part IV: Applied Practice</a></li><li class="breadcrumb-item"><a href="../chapters/09-modeling-exercises.html"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Modeling Exercises</span></a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header sidebar-header-stacked">
+      <a href="../index.html" class="sidebar-logo-link">
+      </a>
+    <div class="sidebar-title mb-0 py-0">
+      <a href="../">Practical Business Analysis</a> 
+    </div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Preface</span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
+ <span class="menu-text">Part I: Foundations</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/01-welcome.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Welcome to Business Analysis</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/02-fundamentals.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Business Analysis Fundamentals</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true">
+ <span class="menu-text">Part II: Core Knowledge Areas</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/03-strategy.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Strategy: What Problem to Solve</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/04-planning.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Business Analysis Planning and Monitoring</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/05-elicitation.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Requirement Elicitation and Collaboration</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/06-lifecycle.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Requirement Lifecycle Management</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/07-analysis-design.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Requirements Analysis and Design Definition</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true">
+ <span class="menu-text">Part III: Agile Practice</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/08-agile-scrum.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Agile and Scrum</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true">
+ <span class="menu-text">Part IV: Applied Practice</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/09-modeling-exercises.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Modeling Exercises</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/10-ba-ai.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Business Analysis in the Age of AI</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/11-ba-disciplines.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Business Analysis Across Disciplines</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/12-ba-data-analytics.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Business Analysis in Data Analytics</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/13-capstone.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Innovate360 Capstone Project</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../references.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">References</span></a>
+  </div>
+</li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#why-practice-matters" id="toc-why-practice-matters" class="nav-link active" data-scroll-target="#why-practice-matters"><span class="header-section-number">9.1</span> Why Practice Matters</a></li>
+  <li><a href="#exercise-1-use-case-diagram-for-amazon" id="toc-exercise-1-use-case-diagram-for-amazon" class="nav-link" data-scroll-target="#exercise-1-use-case-diagram-for-amazon"><span class="header-section-number">9.2</span> Exercise 1: Use Case Diagram for Amazon</a></li>
+  <li><a href="#exercise-2-user-stories-for-course-registration" id="toc-exercise-2-user-stories-for-course-registration" class="nav-link" data-scroll-target="#exercise-2-user-stories-for-course-registration"><span class="header-section-number">9.3</span> Exercise 2: User Stories for Course Registration</a></li>
+  <li><a href="#exercise-3-process-model-for-order-fulfillment" id="toc-exercise-3-process-model-for-order-fulfillment" class="nav-link" data-scroll-target="#exercise-3-process-model-for-order-fulfillment"><span class="header-section-number">9.4</span> Exercise 3: Process Model for Order Fulfillment</a></li>
+  <li><a href="#exercise-4-class-diagram-for-library-system" id="toc-exercise-4-class-diagram-for-library-system" class="nav-link" data-scroll-target="#exercise-4-class-diagram-for-library-system"><span class="header-section-number">9.5</span> Exercise 4: Class Diagram for Library System</a></li>
+  <li><a href="#exercise-5-atm-system-complete-analysis" id="toc-exercise-5-atm-system-complete-analysis" class="nav-link" data-scroll-target="#exercise-5-atm-system-complete-analysis"><span class="header-section-number">9.6</span> Exercise 5: ATM System Complete Analysis</a>
+  <ul class="collapse">
+  <li><a href="#part-a-context-diagram" id="toc-part-a-context-diagram" class="nav-link" data-scroll-target="#part-a-context-diagram"><span class="header-section-number">9.6.1</span> Part A: Context Diagram</a></li>
+  <li><a href="#part-b-use-case-diagram" id="toc-part-b-use-case-diagram" class="nav-link" data-scroll-target="#part-b-use-case-diagram"><span class="header-section-number">9.6.2</span> Part B: Use Case Diagram</a></li>
+  <li><a href="#part-c-use-case-narrative" id="toc-part-c-use-case-narrative" class="nav-link" data-scroll-target="#part-c-use-case-narrative"><span class="header-section-number">9.6.3</span> Part C: Use Case Narrative</a></li>
+  <li><a href="#part-d-activity-diagram" id="toc-part-d-activity-diagram" class="nav-link" data-scroll-target="#part-d-activity-diagram"><span class="header-section-number">9.6.4</span> Part D: Activity Diagram</a></li>
+  <li><a href="#part-e-class-diagram" id="toc-part-e-class-diagram" class="nav-link" data-scroll-target="#part-e-class-diagram"><span class="header-section-number">9.6.5</span> Part E: Class Diagram</a></li>
+  </ul></li>
+  <li><a href="#exercise-6-healthcare-appointment-system" id="toc-exercise-6-healthcare-appointment-system" class="nav-link" data-scroll-target="#exercise-6-healthcare-appointment-system"><span class="header-section-number">9.7</span> Exercise 6: Healthcare Appointment System</a>
+  <ul class="collapse">
+  <li><a href="#your-tasks" id="toc-your-tasks" class="nav-link" data-scroll-target="#your-tasks"><span class="header-section-number">9.7.1</span> Your Tasks</a></li>
+  </ul></li>
+  <li><a href="#exercise-7-problem-statement-practice" id="toc-exercise-7-problem-statement-practice" class="nav-link" data-scroll-target="#exercise-7-problem-statement-practice"><span class="header-section-number">9.8</span> Exercise 7: Problem Statement Practice</a></li>
+  <li><a href="#exercise-8-root-cause-analysis" id="toc-exercise-8-root-cause-analysis" class="nav-link" data-scroll-target="#exercise-8-root-cause-analysis"><span class="header-section-number">9.9</span> Exercise 8: Root Cause Analysis</a></li>
+  <li><a href="#tips-for-success" id="toc-tips-for-success" class="nav-link" data-scroll-target="#tips-for-success"><span class="header-section-number">9.10</span> Tips for Success</a></li>
+  <li><a href="#reflection-questions" id="toc-reflection-questions" class="nav-link" data-scroll-target="#reflection-questions"><span class="header-section-number">9.11</span> Reflection Questions</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../chapters/09-modeling-exercises.html">Part IV: Applied Practice</a></li><li class="breadcrumb-item"><a href="../chapters/09-modeling-exercises.html"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Modeling Exercises</span></a></li></ol></nav>
+<div class="quarto-title">
+<h1 class="title"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Modeling Exercises</span></h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<p>This chapter provides hands-on practice with the modeling techniques you have learned. Working through these exercises will build your skills and prepare you for real-world Business Analysis work.</p>
+<section id="why-practice-matters" class="level2" data-number="9.1">
+<h2 data-number="9.1" class="anchored" data-anchor-id="why-practice-matters"><span class="header-section-number">9.1</span> Why Practice Matters</h2>
+<p>Reading about techniques is not enough. You must practice applying them to develop proficiency. These exercises give you that opportunity.</p>
+<p>Work through each exercise carefully. Do not rush to look at sample solutions. The learning happens in the struggle to figure things out yourself.</p>
+</section>
+<section id="exercise-1-use-case-diagram-for-amazon" class="level2" data-number="9.2">
+<h2 data-number="9.2" class="anchored" data-anchor-id="exercise-1-use-case-diagram-for-amazon"><span class="header-section-number">9.2</span> Exercise 1: Use Case Diagram for Amazon</h2>
+<p>Create a use case diagram for the Amazon website. Consider all the major functions that users can perform.</p>
+<p>Think about different types of actors. Customers have certain capabilities. Registered members have additional capabilities. Sellers have their own set of functions. Administrators manage the system.</p>
+<p>Consider the major use cases: searching for products, viewing product details, adding items to cart, managing the cart, checking out, tracking orders, leaving reviews, managing account settings, listing products for sale, managing inventory, and processing returns.</p>
+<p>Think about relationships between use cases. Does checkout include payment processing? Does viewing product details extend to viewing reviews?</p>
+<p>Draw your diagram before looking at any sample solutions. Then compare your work and identify what you missed or what you might improve.</p>
+</section>
+<section id="exercise-2-user-stories-for-course-registration" class="level2" data-number="9.3">
+<h2 data-number="9.3" class="anchored" data-anchor-id="exercise-2-user-stories-for-course-registration"><span class="header-section-number">9.3</span> Exercise 2: User Stories for Course Registration</h2>
+<p>Write user stories for a university course registration system. Consider multiple types of users and their needs.</p>
+<p>For students, think about what they need to accomplish: searching for courses, checking prerequisites, registering for courses, dropping courses, viewing schedules, joining waitlists, receiving notifications.</p>
+<p>For advisors, consider: viewing student records, approving registration overrides, running reports on advisee progress.</p>
+<p>For registrars, think about: managing course offerings, setting registration periods, handling special cases, generating transcripts.</p>
+<p>Write each story using the standard format: As a [user type], I want [goal] so that [reason].</p>
+<p>For at least three of your stories, write acceptance criteria that specify the conditions for completion.</p>
+</section>
+<section id="exercise-3-process-model-for-order-fulfillment" class="level2" data-number="9.4">
+<h2 data-number="9.4" class="anchored" data-anchor-id="exercise-3-process-model-for-order-fulfillment"><span class="header-section-number">9.4</span> Exercise 3: Process Model for Order Fulfillment</h2>
+<p>Create an activity diagram showing the order fulfillment process for an e-commerce company.</p>
+<p>Start when an order is received. Consider the steps involved: validating payment, checking inventory, picking items from warehouse, packing the order, generating shipping labels, handing off to carrier, updating order status, sending notifications to customer.</p>
+<p>Think about decision points. What happens if payment fails? What if an item is out of stock? What if the shipping address is invalid?</p>
+<p>Consider which activities can happen in parallel. Can packing begin before all items are picked? Can the shipping label be generated while packing occurs?</p>
+<p>Use swimlanes to show which department or system handles each activity: order management system, warehouse, shipping department, payment processor.</p>
+</section>
+<section id="exercise-4-class-diagram-for-library-system" class="level2" data-number="9.5">
+<h2 data-number="9.5" class="anchored" data-anchor-id="exercise-4-class-diagram-for-library-system"><span class="header-section-number">9.5</span> Exercise 4: Class Diagram for Library System</h2>
+<p>Design a class diagram for a library management system.</p>
+<p>Identify the key entities: books, members, loans, reservations, librarians, branches.</p>
+<p>For each class, identify attributes. A book has a title, author, ISBN, publication date, and status. A member has a name, address, membership number, and membership type.</p>
+<p>Identify operations. A member can borrow books, return books, and reserve books. A librarian can add books, remove books, and process loans.</p>
+<p>Define relationships. A member can have many loans. A loan involves one book. A book can have many reservations. A branch has many books.</p>
+<p>Specify multiplicities. How many loans can a member have at once? Can a book be on loan to multiple members simultaneously?</p>
+<p>Consider inheritance. Are there different types of members with different borrowing limits? Are there different types of materials besides books?</p>
+</section>
+<section id="exercise-5-atm-system-complete-analysis" class="level2" data-number="9.6">
+<h2 data-number="9.6" class="anchored" data-anchor-id="exercise-5-atm-system-complete-analysis"><span class="header-section-number">9.6</span> Exercise 5: ATM System Complete Analysis</h2>
+<p>This comprehensive exercise integrates multiple techniques for an ATM system.</p>
+<section id="part-a-context-diagram" class="level3" data-number="9.6.1">
+<h3 data-number="9.6.1" class="anchored" data-anchor-id="part-a-context-diagram"><span class="header-section-number">9.6.1</span> Part A: Context Diagram</h3>
+<p>Draw a context diagram showing the ATM system and its external entities. Consider: customers, the bank’s core system, the card network, the cash management service.</p>
+</section>
+<section id="part-b-use-case-diagram" class="level3" data-number="9.6.2">
+<h3 data-number="9.6.2" class="anchored" data-anchor-id="part-b-use-case-diagram"><span class="header-section-number">9.6.2</span> Part B: Use Case Diagram</h3>
+<p>Create a use case diagram showing major ATM functions: withdraw cash, deposit funds, check balance, transfer between accounts, change PIN.</p>
+</section>
+<section id="part-c-use-case-narrative" class="level3" data-number="9.6.3">
+<h3 data-number="9.6.3" class="anchored" data-anchor-id="part-c-use-case-narrative"><span class="header-section-number">9.6.3</span> Part C: Use Case Narrative</h3>
+<p>Write a complete use case narrative for “Withdraw Cash” including:</p>
+<ul>
+<li>Use case name and description</li>
+<li>Primary actor</li>
+<li>Preconditions</li>
+<li>Postconditions</li>
+<li>Basic flow (step by step)</li>
+<li>Alternative flows (insufficient funds, daily limit exceeded)</li>
+<li>Exception flows (card retained, system error)</li>
+</ul>
+</section>
+<section id="part-d-activity-diagram" class="level3" data-number="9.6.4">
+<h3 data-number="9.6.4" class="anchored" data-anchor-id="part-d-activity-diagram"><span class="header-section-number">9.6.4</span> Part D: Activity Diagram</h3>
+<p>Create an activity diagram showing the withdrawal process with swimlanes for Customer, ATM, and Bank System.</p>
+</section>
+<section id="part-e-class-diagram" class="level3" data-number="9.6.5">
+<h3 data-number="9.6.5" class="anchored" data-anchor-id="part-e-class-diagram"><span class="header-section-number">9.6.5</span> Part E: Class Diagram</h3>
+<p>Design a class diagram with classes for: Account, Customer, Card, Transaction, ATM.</p>
+</section>
+</section>
+<section id="exercise-6-healthcare-appointment-system" class="level2" data-number="9.7">
+<h2 data-number="9.7" class="anchored" data-anchor-id="exercise-6-healthcare-appointment-system"><span class="header-section-number">9.7</span> Exercise 6: Healthcare Appointment System</h2>
+<p>A medical clinic wants a new appointment scheduling system. You have gathered the following information from stakeholders:</p>
+<p>Patients need to book appointments with specific doctors or for specific services. They want to see available time slots and choose one that works for them. They need reminders before appointments. They want to cancel or reschedule online.</p>
+<p>Doctors need to see their daily schedules. They want to block time for administrative tasks. They need patient information before appointments. They want to document visit notes.</p>
+<p>Office staff need to manage the overall schedule. They handle walk-ins and emergencies. They need to contact patients about schedule changes. They process insurance information.</p>
+<section id="your-tasks" class="level3" data-number="9.7.1">
+<h3 data-number="9.7.1" class="anchored" data-anchor-id="your-tasks"><span class="header-section-number">9.7.1</span> Your Tasks</h3>
+<ol type="1">
+<li>Write five user stories from the patient perspective with acceptance criteria</li>
+<li>Create a use case diagram showing major system functions</li>
+<li>Design an activity diagram for the appointment booking process</li>
+<li>Identify the key classes and their relationships</li>
+</ol>
+</section>
+</section>
+<section id="exercise-7-problem-statement-practice" class="level2" data-number="9.8">
+<h2 data-number="9.8" class="anchored" data-anchor-id="exercise-7-problem-statement-practice"><span class="header-section-number">9.8</span> Exercise 7: Problem Statement Practice</h2>
+<p>For each scenario below, write a properly formatted problem statement.</p>
+<p><strong>Scenario A:</strong> A retail company’s website crashes during peak shopping periods, causing customers to abandon their carts and shop elsewhere.</p>
+<p><strong>Scenario B:</strong> A manufacturing plant experiences frequent equipment breakdowns because maintenance is only performed after failures occur.</p>
+<p><strong>Scenario C:</strong> A bank’s loan approval process takes three weeks, causing customers to seek financing from competitors who approve loans faster.</p>
+<p>Write each problem statement using the format: The problem of [X] is affecting [Y], the impact of which is [Z], and a successful solution would [outcome].</p>
+</section>
+<section id="exercise-8-root-cause-analysis" class="level2" data-number="9.9">
+<h2 data-number="9.9" class="anchored" data-anchor-id="exercise-8-root-cause-analysis"><span class="header-section-number">9.9</span> Exercise 8: Root Cause Analysis</h2>
+<p>A software company receives many customer complaints about late deliveries. Use the Five Whys technique to find the root cause.</p>
+<p>Starting point: Customer deliveries are frequently late.</p>
+<p>Ask “why” at least five times, with each question building on the previous answer. Document your chain of reasoning.</p>
+<p>Then create a fishbone diagram exploring multiple potential causes across categories: People, Process, Technology, Policies.</p>
+</section>
+<section id="tips-for-success" class="level2" data-number="9.10">
+<h2 data-number="9.10" class="anchored" data-anchor-id="tips-for-success"><span class="header-section-number">9.10</span> Tips for Success</h2>
+<p>As you work through these exercises, keep several principles in mind.</p>
+<p>Start with what you know. Do not wait until you understand everything perfectly. Begin drawing, and refine as you go.</p>
+<p>Use consistent notation. Follow the standard symbols and conventions for each diagram type.</p>
+<p>Seek feedback. Show your work to classmates or colleagues. Different perspectives reveal gaps you might miss.</p>
+<p>Iterate. Your first attempt will not be perfect. Refine your models based on what you learn.</p>
+<p>Connect the models. Use cases should trace to requirements. Requirements should trace to test cases. Classes should support use cases. The models work together as a coherent whole.</p>
+</section>
+<section id="reflection-questions" class="level2" data-number="9.11">
+<h2 data-number="9.11" class="anchored" data-anchor-id="reflection-questions"><span class="header-section-number">9.11</span> Reflection Questions</h2>
+<p>After completing these exercises, reflect on your experience:</p>
+<ol type="1">
+<li>Which modeling technique felt most natural to you? Why?</li>
+<li>Which technique was most challenging? What made it difficult?</li>
+<li>How did creating multiple model types for the same system deepen your understanding?</li>
+<li>What would you do differently if you were starting these exercises again?</li>
+</ol>
+<p>These exercises prepare you for the more advanced topics in the remaining chapters. The skills you develop here will serve you throughout your career.</p>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="../chapters/08-agile-scrum.html" class="pagination-link" aria-label="Agile and Scrum">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Agile and Scrum</span></span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="../chapters/10-ba-ai.html" class="pagination-link" aria-label="Business Analysis in the Age of AI">
+        <span class="nav-page-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Business Analysis in the Age of AI</span></span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+
+
+
+
+</body></html>

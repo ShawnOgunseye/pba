@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 420">
+  <!-- Background -->
+  <rect width="800" height="420" fill="#f8fafc"/>
+  
+  <!-- Title -->
+  <text x="400" y="35" font-family="Arial, sans-serif" font-size="20" font-weight="bold" text-anchor="middle" fill="#1e293b">Waterfall Model (Predictive Approach)</text>
+  
+  <!-- Phase boxes arranged as waterfall -->
+  <!-- Requirements -->
+  <rect x="80" y="70" width="140" height="50" rx="6" fill="#3b82f6" stroke="#1d4ed8" stroke-width="2"/>
+  <text x="150" y="100" font-family="Arial, sans-serif" font-size="13" font-weight="bold" text-anchor="middle" fill="white">Requirements</text>
+  
+  <!-- Design -->
+  <rect x="180" y="130" width="140" height="50" rx="6" fill="#6366f1" stroke="#4f46e5" stroke-width="2"/>
+  <text x="250" y="160" font-family="Arial, sans-serif" font-size="13" font-weight="bold" text-anchor="middle" fill="white">Design</text>
+  
+  <!-- Development -->
+  <rect x="280" y="190" width="140" height="50" rx="6" fill="#8b5cf6" stroke="#7c3aed" stroke-width="2"/>
+  <text x="350" y="220" font-family="Arial, sans-serif" font-size="13" font-weight="bold" text-anchor="middle" fill="white">Development</text>
+  
+  <!-- Testing -->
+  <rect x="380" y="250" width="140" height="50" rx="6" fill="#a855f7" stroke="#9333ea" stroke-width="2"/>
+  <text x="450" y="280" font-family="Arial, sans-serif" font-size="13" font-weight="bold" text-anchor="middle" fill="white">Testing</text>
+  
+  <!-- Deployment -->
+  <rect x="480" y="310" width="140" height="50" rx="6" fill="#c026d3" stroke="#a21caf" stroke-width="2"/>
+  <text x="550" y="340" font-family="Arial, sans-serif" font-size="13" font-weight="bold" text-anchor="middle" fill="white">Deployment</text>
+  
+  <!-- Maintenance -->
+  <rect x="580" y="370" width="140" height="40" rx="6" fill="#db2777" stroke="#be185d" stroke-width="2"/>
+  <text x="650" y="395" font-family="Arial, sans-serif" font-size="13" font-weight="bold" text-anchor="middle" fill="white">Maintenance</text>
+  
+  <!-- Arrows showing flow -->
+  <defs>
+    <marker id="waterArrow" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#64748b"/>
+    </marker>
+  </defs>
+  
+  <path d="M 220 95 L 240 95 L 240 130" stroke="#64748b" stroke-width="2" fill="none" marker-end="url(#waterArrow)"/>
+  <path d="M 320 155 L 340 155 L 340 190" stroke="#64748b" stroke-width="2" fill="none" marker-end="url(#waterArrow)"/>
+  <path d="M 420 215 L 440 215 L 440 250" stroke="#64748b" stroke-width="2" fill="none" marker-end="url(#waterArrow)"/>
+  <path d="M 520 275 L 540 275 L 540 310" stroke="#64748b" stroke-width="2" fill="none" marker-end="url(#waterArrow)"/>
+  <path d="M 620 335 L 640 335 L 640 370" stroke="#64748b" stroke-width="2" fill="none" marker-end="url(#waterArrow)"/>
+  
+  <!-- Characteristics box -->
+  <rect x="560" y="70" width="200" height="140" rx="8" fill="#eff6ff" stroke="#bfdbfe" stroke-width="2"/>
+  <text x="660" y="92" font-family="Arial, sans-serif" font-size="12" font-weight="bold" text-anchor="middle" fill="#1e40af">When to Use:</text>
+  <text x="570" y="112" font-family="Arial, sans-serif" font-size="10" fill="#3b82f6">• Clear objectives</text>
+  <text x="570" y="128" font-family="Arial, sans-serif" font-size="10" fill="#3b82f6">• Stable requirements</text>
+  <text x="570" y="144" font-family="Arial, sans-serif" font-size="10" fill="#3b82f6">• Formal approvals needed</text>
+  <text x="570" y="160" font-family="Arial, sans-serif" font-size="10" fill="#3b82f6">• Large, complex projects</text>
+  <text x="570" y="176" font-family="Arial, sans-serif" font-size="10" fill="#3b82f6">• Team knows solution</text>
+  <text x="570" y="192" font-family="Arial, sans-serif" font-size="10" fill="#3b82f6">• Resource constraints</text>
+</svg>

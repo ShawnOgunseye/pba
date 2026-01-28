@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 300">
+  <!-- Background -->
+  <rect width="800" height="300" fill="#f8fafc"/>
+  
+  <!-- Title -->
+  <text x="400" y="35" font-family="Arial, sans-serif" font-size="20" font-weight="bold" text-anchor="middle" fill="#1e293b">Business Analysis Certifications</text>
+  
+  <!-- ECBA -->
+  <rect x="50" y="70" width="160" height="180" rx="10" fill="#dbeafe" stroke="#3b82f6" stroke-width="3"/>
+  <circle cx="130" cy="120" r="30" fill="#3b82f6"/>
+  <text x="130" y="128" font-family="Arial, sans-serif" font-size="20" font-weight="bold" text-anchor="middle" fill="white">E</text>
+  <text x="130" y="170" font-family="Arial, sans-serif" font-size="16" font-weight="bold" text-anchor="middle" fill="#1e40af">ECBA</text>
+  <text x="130" y="190" font-family="Arial, sans-serif" font-size="9" text-anchor="middle" fill="#3b82f6">Entry Certificate in</text>
+  <text x="130" y="203" font-family="Arial, sans-serif" font-size="9" text-anchor="middle" fill="#3b82f6">Business Analysis</text>
+  <text x="130" y="230" font-family="Arial, sans-serif" font-size="10" text-anchor="middle" fill="#64748b">Entry Level</text>
+  
+  <!-- CCBA -->
+  <rect x="230" y="70" width="160" height="180" rx="10" fill="#dcfce7" stroke="#22c55e" stroke-width="3"/>
+  <circle cx="310" cy="120" r="30" fill="#22c55e"/>
+  <text x="310" y="128" font-family="Arial, sans-serif" font-size="20" font-weight="bold" text-anchor="middle" fill="white">C</text>
+  <text x="310" y="170" font-family="Arial, sans-serif" font-size="16" font-weight="bold" text-anchor="middle" fill="#15803d">CCBA</text>
+  <text x="310" y="190" font-family="Arial, sans-serif" font-size="9" text-anchor="middle" fill="#22c55e">Certification of</text>
+  <text x="310" y="203" font-family="Arial, sans-serif" font-size="9" text-anchor="middle" fill="#22c55e">Capability in BA</text>
+  <text x="310" y="230" font-family="Arial, sans-serif" font-size="10" text-anchor="middle" fill="#64748b">Mid-Level</text>
+  
+  <!-- CBAP -->
+  <rect x="410" y="70" width="160" height="180" rx="10" fill="#fef3c7" stroke="#f59e0b" stroke-width="3"/>
+  <circle cx="490" cy="120" r="30" fill="#f59e0b"/>
+  <text x="490" y="128" font-family="Arial, sans-serif" font-size="20" font-weight="bold" text-anchor="middle" fill="white">P</text>
+  <text x="490" y="170" font-family="Arial, sans-serif" font-size="16" font-weight="bold" text-anchor="middle" fill="#b45309">CBAP</text>
+  <text x="490" y="190" font-family="Arial, sans-serif" font-size="9" text-anchor="middle" fill="#f59e0b">Certified Business</text>
+  <text x="490" y="203" font-family="Arial, sans-serif" font-size="9" text-anchor="middle" fill="#f59e0b">Analysis Professional</text>
+  <text x="490" y="230" font-family="Arial, sans-serif" font-size="10" text-anchor="middle" fill="#64748b">Senior Level</text>
+  
+  <!-- PMI-PBA -->
+  <rect x="590" y="70" width="160" height="180" rx="10" fill="#f3e8ff" stroke="#a855f7" stroke-width="3"/>
+  <circle cx="670" cy="120" r="30" fill="#a855f7"/>
+  <text x="670" y="128" font-family="Arial, sans-serif" font-size="16" font-weight="bold" text-anchor="middle" fill="white">PMI</text>
+  <text x="670" y="170" font-family="Arial, sans-serif" font-size="16" font-weight="bold" text-anchor="middle" fill="#7e22ce">PMI-PBA</text>
+  <text x="670" y="190" font-family="Arial, sans-serif" font-size="9" text-anchor="middle" fill="#a855f7">Professional in</text>
+  <text x="670" y="203" font-family="Arial, sans-serif" font-size="9" text-anchor="middle" fill="#a855f7">Business Analysis</text>
+  <text x="670" y="230" font-family="Arial, sans-serif" font-size="10" text-anchor="middle" fill="#64748b">PMI Credential</text>
+  
+  <!-- Footer -->
+  <text x="400" y="280" font-family="Arial, sans-serif" font-size="11" text-anchor="middle" fill="#64748b">IIBA (International Institute of Business Analysis) and PMI (Project Management Institute) Certifications</text>
+</svg>

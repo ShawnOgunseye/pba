@@ -1,0 +1,894 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.8.25">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>6&nbsp; Requirement Lifecycle Management – Practical Business Analysis</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<link href="../chapters/07-analysis-design.html" rel="next">
+<link href="../chapters/05-elicitation.html" rel="prev">
+<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-7b89279ff1a6dce999919e0e67d4d9ec.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-70a47bd5681a7291082a5b9f83d58762.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+
+</head>
+
+<body class="nav-sidebar floating quarto-light">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../chapters/03-strategy.html">Part II: Core Knowledge Areas</a></li><li class="breadcrumb-item"><a href="../chapters/06-lifecycle.html"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Requirement Lifecycle Management</span></a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header sidebar-header-stacked">
+      <a href="../index.html" class="sidebar-logo-link">
+      </a>
+    <div class="sidebar-title mb-0 py-0">
+      <a href="../">Practical Business Analysis</a> 
+    </div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Preface</span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
+ <span class="menu-text">Part I: Foundations</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/01-welcome.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Welcome to Business Analysis</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/02-fundamentals.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Business Analysis Fundamentals</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true">
+ <span class="menu-text">Part II: Core Knowledge Areas</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/03-strategy.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Strategy: What Problem to Solve</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/04-planning.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Business Analysis Planning and Monitoring</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/05-elicitation.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Requirement Elicitation and Collaboration</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/06-lifecycle.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Requirement Lifecycle Management</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/07-analysis-design.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Requirements Analysis and Design Definition</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true">
+ <span class="menu-text">Part III: Agile Practice</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/08-agile-scrum.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Agile and Scrum</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true">
+ <span class="menu-text">Part IV: Applied Practice</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/09-modeling-exercises.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Modeling Exercises</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/10-ba-ai.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Business Analysis in the Age of AI</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/11-ba-disciplines.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Business Analysis Across Disciplines</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/12-ba-data-analytics.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Business Analysis in Data Analytics</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/13-capstone.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Innovate360 Capstone Project</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../references.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">References</span></a>
+  </div>
+</li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#what-this-knowledge-area-covers" id="toc-what-this-knowledge-area-covers" class="nav-link active" data-scroll-target="#what-this-knowledge-area-covers"><span class="header-section-number">6.1</span> What This Knowledge Area Covers</a></li>
+  <li><a href="#tracing-requirements" id="toc-tracing-requirements" class="nav-link" data-scroll-target="#tracing-requirements"><span class="header-section-number">6.2</span> Tracing Requirements</a>
+  <ul class="collapse">
+  <li><a href="#types-of-relationships" id="toc-types-of-relationships" class="nav-link" data-scroll-target="#types-of-relationships"><span class="header-section-number">6.2.1</span> Types of Relationships</a></li>
+  </ul></li>
+  <li><a href="#maintaining-requirements" id="toc-maintaining-requirements" class="nav-link" data-scroll-target="#maintaining-requirements"><span class="header-section-number">6.3</span> Maintaining Requirements</a>
+  <ul class="collapse">
+  <li><a href="#reusing-requirements" id="toc-reusing-requirements" class="nav-link" data-scroll-target="#reusing-requirements"><span class="header-section-number">6.3.1</span> Reusing Requirements</a></li>
+  </ul></li>
+  <li><a href="#prioritizing-requirements" id="toc-prioritizing-requirements" class="nav-link" data-scroll-target="#prioritizing-requirements"><span class="header-section-number">6.4</span> Prioritizing Requirements</a>
+  <ul class="collapse">
+  <li><a href="#factors-influencing-priority" id="toc-factors-influencing-priority" class="nav-link" data-scroll-target="#factors-influencing-priority"><span class="header-section-number">6.4.1</span> Factors Influencing Priority</a></li>
+  <li><a href="#the-moscow-method" id="toc-the-moscow-method" class="nav-link" data-scroll-target="#the-moscow-method"><span class="header-section-number">6.4.2</span> The MoSCoW Method</a></li>
+  <li><a href="#challenges-in-prioritization" id="toc-challenges-in-prioritization" class="nav-link" data-scroll-target="#challenges-in-prioritization"><span class="header-section-number">6.4.3</span> Challenges in Prioritization</a></li>
+  <li><a href="#continual-prioritization" id="toc-continual-prioritization" class="nav-link" data-scroll-target="#continual-prioritization"><span class="header-section-number">6.4.4</span> Continual Prioritization</a></li>
+  </ul></li>
+  <li><a href="#assessing-requirement-changes" id="toc-assessing-requirement-changes" class="nav-link" data-scroll-target="#assessing-requirement-changes"><span class="header-section-number">6.5</span> Assessing Requirement Changes</a>
+  <ul class="collapse">
+  <li><a href="#impact-analysis" id="toc-impact-analysis" class="nav-link" data-scroll-target="#impact-analysis"><span class="header-section-number">6.5.1</span> Impact Analysis</a></li>
+  </ul></li>
+  <li><a href="#approving-requirements" id="toc-approving-requirements" class="nav-link" data-scroll-target="#approving-requirements"><span class="header-section-number">6.6</span> Approving Requirements</a></li>
+  <li><a href="#case-example-the-retail-inventory-disaster" id="toc-case-example-the-retail-inventory-disaster" class="nav-link" data-scroll-target="#case-example-the-retail-inventory-disaster"><span class="header-section-number">6.7</span> Case Example: The Retail Inventory Disaster</a></li>
+  <li><a href="#review-questions" id="toc-review-questions" class="nav-link" data-scroll-target="#review-questions"><span class="header-section-number">6.8</span> Review Questions</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../chapters/03-strategy.html">Part II: Core Knowledge Areas</a></li><li class="breadcrumb-item"><a href="../chapters/06-lifecycle.html"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Requirement Lifecycle Management</span></a></li></ol></nav>
+<div class="quarto-title">
+<h1 class="title"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Requirement Lifecycle Management</span></h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<p>Requirements are not static artifacts that you create once and forget. They have a lifecycle that extends from the moment they are first conceived through their eventual retirement when they are no longer relevant. Managing this lifecycle well determines whether requirements serve their purpose or become obstacles to success.</p>
+<p>This chapter addresses how Business Analysts manage requirements over time: tracking their relationships, maintaining their accuracy, prioritizing them appropriately, handling changes, and gaining approvals. These activities may seem administrative, but they are essential to project success.</p>
+<section id="what-this-knowledge-area-covers" class="level2" data-number="6.1">
+<h2 data-number="6.1" class="anchored" data-anchor-id="what-this-knowledge-area-covers"><span class="header-section-number">6.1</span> What This Knowledge Area Covers</h2>
+<p>The Requirements Lifecycle Management knowledge area describes tasks that Business Analysts perform to manage and maintain requirements and design information from inception to retirement.</p>
+<p>The primary tasks include establishing meaningful relationships between related requirements and designs, assessing changes when they are proposed, and analyzing changes to gain consensus.</p>
+<p>The purpose is ensuring that business, stakeholder, and solution requirements remain aligned with one another and that the solution actually implements them. Supporting tasks include monitoring requirements and designs, directing how requirements will be implemented, and ensuring that Business Analysis information remains available for future use.</p>
+</section>
+<section id="tracing-requirements" class="level2" data-number="6.2">
+<h2 data-number="6.2" class="anchored" data-anchor-id="tracing-requirements"><span class="header-section-number">6.2</span> Tracing Requirements</h2>
+<p>Traceability means identifying and documenting the lineage of each requirement. This includes backward traceability, which tracks where requirements came from, forward traceability, which tracks where they lead, and relationships to other requirements.</p>
+<p>Why does traceability matter? It helps ensure that the solution conforms to requirements. It assists in managing scope, change, risk, time, cost, and communication. It enables detection of missing functionality. It reveals when implemented functionality is not supported by any requirement.</p>
+<p>Organizations without traceability often discover, late in projects, that critical needs were never addressed or that significant development effort went into features nobody requested. Traceability prevents these expensive surprises.</p>
+<p>What does traceability enable? It supports more reliable discovery of inconsistencies and gaps in requirements. It provides deeper insights into the scope and complexity of proposed changes. It enables reliable assessment of which requirements have been addressed and which have not.</p>
+<section id="types-of-relationships" class="level3" data-number="6.2.1">
+<h3 data-number="6.2.1" class="anchored" data-anchor-id="types-of-relationships"><span class="header-section-number">6.2.1</span> Types of Relationships</h3>
+<p>When defining your traceability approach, consider several types of relationships.</p>
+<p><strong>Derive</strong> relationships show when one requirement is derived from another. A detailed functional requirement might be derived from a higher-level business requirement.</p>
+<p><strong>Depends</strong> relationships indicate that one requirement cannot be implemented without another. This dependency might be based on necessity, where the second requirement is essential, or based on effort, where the second requirement significantly affects implementation complexity.</p>
+<p><strong>Satisfy</strong> relationships show that a solution component meets a particular requirement.</p>
+<p><strong>Validate</strong> relationships connect requirements to the test cases that prove they are implemented correctly.</p>
+</section>
+</section>
+<section id="maintaining-requirements" class="level2" data-number="6.3">
+<h2 data-number="6.3" class="anchored" data-anchor-id="maintaining-requirements"><span class="header-section-number">6.3</span> Maintaining Requirements</h2>
+<p>Requirements must be maintained throughout their lifecycle to retain accuracy and consistency. Maintenance also supports reuse of requirements in other solutions.</p>
+<p>Requirements representing ongoing needs must remain valid over time. This means they must be consistently represented using standard formats and terminology. They must be reviewed and approved through appropriate maintenance processes. They must remain easily accessible and understandable to those who need them.</p>
+<p>Maintaining requirements includes conducting updates after approved changes and maintaining relationships among related requirements.</p>
+<p>Maintaining attributes is equally important. Requirements attributes like source, priority, and complexity aid in management. An attribute may change even when the requirement itself does not. For example, a requirement’s priority might increase due to competitive pressure even though the requirement text remains unchanged.</p>
+<section id="reusing-requirements" class="level3" data-number="6.3.1">
+<h3 data-number="6.3.1" class="anchored" data-anchor-id="reusing-requirements"><span class="header-section-number">6.3.1</span> Reusing Requirements</h3>
+<p>Some requirements are candidates for long-term use across multiple initiatives. These include regulatory requirements that persist regardless of individual projects, contractual obligations that govern multiple systems, quality standards that apply broadly, service level agreements, business rules, business processes, and requirements describing products the enterprise produces.</p>
+<p>Requirements intended for reuse must be identified clearly, named consistently, defined precisely, and stored in ways that make them easily retrievable. They can then be reused within the current initiative, within similar initiatives, within similar departments, or throughout the entire organization.</p>
+</section>
+</section>
+<section id="prioritizing-requirements" class="level2" data-number="6.4">
+<h2 data-number="6.4" class="anchored" data-anchor-id="prioritizing-requirements"><span class="header-section-number">6.4</span> Prioritizing Requirements</h2>
+<p>Organizations face a constant truth: there is always more to do than resources allow. Prioritization determines which requirements receive attention and in what order.</p>
+<p>Prioritization ranks requirements by relative importance. Priority can refer to the value a requirement provides or to the sequence in which it will be implemented. This is not a one-time activity. Prioritization is ongoing throughout the project lifecycle.</p>
+<section id="factors-influencing-priority" class="level3" data-number="6.4.1">
+<h3 data-number="6.4.1" class="anchored" data-anchor-id="factors-influencing-priority"><span class="header-section-number">6.4.1</span> Factors Influencing Priority</h3>
+<p>Many factors shape prioritization decisions.</p>
+<p><strong>Benefit</strong> considers what value the requirement provides if implemented.</p>
+<p><strong>Penalty</strong> considers what negative consequences occur if the requirement is not implemented.</p>
+<p><strong>Cost</strong> considers how expensive implementation will be.</p>
+<p><strong>Risk</strong> considers what could go wrong and how likely problems are.</p>
+<p><strong>Dependencies</strong> consider whether the requirement relies on other requirements that must be implemented first.</p>
+<p><strong>Time sensitivity</strong> considers whether deadlines affect when the requirement must be delivered.</p>
+<p><strong>Stability</strong> considers how likely the requirement is to change.</p>
+<p><strong>Regulatory or policy compliance</strong> considers whether the requirement is legally mandated.</p>
+</section>
+<section id="the-moscow-method" class="level3" data-number="6.4.2">
+<h3 data-number="6.4.2" class="anchored" data-anchor-id="the-moscow-method"><span class="header-section-number">6.4.2</span> The MoSCoW Method</h3>
+<div id="fig-moscow" class="quarto-float quarto-figure quarto-figure-center anchored" alt="MoSCoW prioritization showing Must Have, Should Have, Could Have, and Won't Have">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-moscow-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="../images/ch06_moscow.svg" class="img-fluid figure-img" alt="MoSCoW prioritization showing Must Have, Should Have, Could Have, and Won't Have">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-moscow-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;6.1: MoSCoW categorizes requirements into four groups, forcing explicit trade-off decisions.
+</figcaption>
+</figure>
+</div>
+<p>One popular prioritization approach is MoSCoW (<a href="#fig-moscow" class="quarto-xref">Figure&nbsp;<span>6.1</span></a>), which categorizes requirements into four groups.</p>
+<p><strong>Must Have</strong> requirements are non-negotiable. The solution will not work without them. These are the absolute essentials that define minimum viability.</p>
+<p><strong>Should Have</strong> requirements are important but not vital. The solution can function without them, but their absence creates significant problems or limitations.</p>
+<p><strong>Could Have</strong> requirements are desirable. They add value and would be nice to include, but their absence does not seriously impair the solution.</p>
+<p><strong>Won’t Have</strong> requirements are explicitly excluded from the current scope. They might be addressed in future releases, but they are not priorities now.</p>
+<p>The value of MoSCoW lies in forcing explicit decisions. When stakeholders must categorize requirements, they cannot avoid trade-offs. Everything cannot be a “must have.”</p>
+</section>
+<section id="challenges-in-prioritization" class="level3" data-number="6.4.3">
+<h3 data-number="6.4.3" class="anchored" data-anchor-id="challenges-in-prioritization"><span class="header-section-number">6.4.3</span> Challenges in Prioritization</h3>
+<p>Prioritization is difficult for several reasons.</p>
+<p>Different stakeholders value different things, creating conflicts that must be resolved.</p>
+<p>Stakeholders resist characterizing any of their requirements as lower priority. Everything feels important to the person who requested it.</p>
+<p>Some stakeholders may game the system, inflating priority to influence results.</p>
+</section>
+<section id="continual-prioritization" class="level3" data-number="6.4.4">
+<h3 data-number="6.4.4" class="anchored" data-anchor-id="continual-prioritization"><span class="header-section-number">6.4.4</span> Continual Prioritization</h3>
+<p>Priorities shift as context evolves and information becomes available. What seemed essential early in a project may become less important as understanding develops. What seemed optional may become critical as competitive threats emerge.</p>
+<p>The basis for prioritization may also change at different stages. Early prioritization might focus on risk reduction. Later prioritization might focus on value delivery. Business Analysts must remain flexible and help stakeholders reassess priorities as circumstances change.</p>
+</section>
+</section>
+<section id="assessing-requirement-changes" class="level2" data-number="6.5">
+<h2 data-number="6.5" class="anchored" data-anchor-id="assessing-requirement-changes"><span class="header-section-number">6.5</span> Assessing Requirement Changes</h2>
+<p>Change is inevitable. Requirements that seemed complete will need modification. New requirements will emerge. Existing requirements will become obsolete. The question is not whether change will occur but how it will be managed.</p>
+<p>Assessing requirement changes means evaluating the implications of proposed changes to requirements and designs.</p>
+<p>When assessing changes, consider several factors. Does the change align with overall strategy? How does it affect value delivered to business or stakeholder groups? What impact does it have on time or resources required to deliver? Does it alter risks, opportunities, or constraints?</p>
+<section id="impact-analysis" class="level3" data-number="6.5.1">
+<h3 data-number="6.5.1" class="anchored" data-anchor-id="impact-analysis"><span class="header-section-number">6.5.1</span> Impact Analysis</h3>
+<p>Impact analysis assesses the effect of proposed changes. Traceability is a valuable tool here because it reveals what else a change might affect.</p>
+<p>Impact analysis considers benefit, meaning what value the change provides. It considers cost, meaning what implementation will require. It considers impact, meaning what else will be affected by the change. It considers schedule, meaning how timelines are affected. It considers urgency, meaning how quickly the change is needed.</p>
+</section>
+</section>
+<section id="approving-requirements" class="level2" data-number="6.6">
+<h2 data-number="6.6" class="anchored" data-anchor-id="approving-requirements"><span class="header-section-number">6.6</span> Approving Requirements</h2>
+<p>At various points, requirements need approval. Approval obtains agreement so that Business Analysis work can continue or solution construction can proceed.</p>
+<p>Approval may be formal with signatures and official documentation, or informal with verbal agreement and email confirmation. The appropriate level of formality depends on organizational culture, risk levels, and the nature of what is being approved.</p>
+<p>Business Analysts work with key stakeholders to gain consensus on new and changed requirements. They communicate outcomes of discussions and track and manage the approval process.</p>
+</section>
+<section id="case-example-the-retail-inventory-disaster" class="level2" data-number="6.7">
+<h2 data-number="6.7" class="anchored" data-anchor-id="case-example-the-retail-inventory-disaster"><span class="header-section-number">6.7</span> Case Example: The Retail Inventory Disaster</h2>
+<p>FastRetail operated 200 stores nationwide. Their inventory system was adequate but aging. When a modernization project began, requirements seemed clear: faster processing, better reporting, integration with the new point-of-sale system.</p>
+<p>The project team documented requirements carefully. They gained approval from stakeholders. Development proceeded on schedule. Testing found and fixed the expected bugs.</p>
+<p>Then the system went live.</p>
+<p>Within days, stores reported major problems. Some products showed as in-stock when shelves were empty. Other products showed as unavailable when warehouses were full. Managers could not trust the numbers.</p>
+<p>Investigation revealed the cause. During the project, the company had changed its approach to handling returns. Returns now went to a central processing facility rather than back to selling stores. This created a new inventory status that neither the old system tracked nor the new requirements addressed.</p>
+<p>The return policy change had been approved by a different department. Nobody connected that decision to the inventory system project. Traceability that might have flagged the impact did not exist. Requirements that might have captured the new status were never written because nobody knew to write them.</p>
+<p>The fix took three months and cost more than the original project. Worse, stores operated with unreliable inventory data during peak season, leading to lost sales and frustrated customers.</p>
+<p>The lesson is sobering. Requirements do not exist in isolation. They exist in a context that changes. Without traceability and ongoing maintenance, changes in that context slip through undetected until they cause damage.</p>
+<p>Now that you understand how to manage requirements throughout their lifecycle, let us move on to analyzing and designing solutions based on those requirements.</p>
+</section>
+<section id="review-questions" class="level2" data-number="6.8">
+<h2 data-number="6.8" class="anchored" data-anchor-id="review-questions"><span class="header-section-number">6.8</span> Review Questions</h2>
+<ol type="1">
+<li><p>Requirements traceability tracks all of the following EXCEPT:</p>
+<ol type="a">
+<li>Where requirements came from</li>
+<li>Where requirements lead</li>
+<li>Individual contributor performance ratings</li>
+<li>Relationships to other requirements</li>
+</ol></li>
+<li><p>In MoSCoW prioritization, “Should Have” requirements are:</p>
+<ol type="a">
+<li>Absolutely essential for the solution to function</li>
+<li>Important but not vital; the solution can work without them</li>
+<li>Desirable nice-to-have features</li>
+<li>Explicitly excluded from current scope</li>
+</ol></li>
+<li><p>Which relationship type indicates that one requirement cannot be implemented without another?</p>
+<ol type="a">
+<li>Derive</li>
+<li>Depends</li>
+<li>Satisfy</li>
+<li>Validate</li>
+</ol></li>
+<li><p>Impact analysis for proposed changes should consider:</p>
+<ol type="a">
+<li>Only the direct cost of implementation</li>
+<li>Benefit, cost, impact on other items, schedule, and urgency</li>
+<li>Only whether stakeholders approve the change</li>
+<li>Only technical feasibility</li>
+</ol></li>
+<li><p>Prioritization in Business Analysis is best described as:</p>
+<ol type="a">
+<li>A one-time activity completed during planning</li>
+<li>An ongoing process throughout the project lifecycle</li>
+<li>Something only executives should perform</li>
+<li>Optional for small projects</li>
+</ol></li>
+</ol>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Answer Key
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-1" class="callout-1-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>1-c, 2-b, 3-b, 4-b, 5-b</p>
+</div>
+</div>
+</div>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="../chapters/05-elicitation.html" class="pagination-link" aria-label="Requirement Elicitation and Collaboration">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Requirement Elicitation and Collaboration</span></span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="../chapters/07-analysis-design.html" class="pagination-link" aria-label="Requirements Analysis and Design Definition">
+        <span class="nav-page-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Requirements Analysis and Design Definition</span></span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+
+
+
+
+</body></html>

@@ -1,0 +1,861 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.8.25">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>10&nbsp; Business Analysis in the Age of AI – Practical Business Analysis</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<link href="../chapters/11-ba-disciplines.html" rel="next">
+<link href="../chapters/09-modeling-exercises.html" rel="prev">
+<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-7b89279ff1a6dce999919e0e67d4d9ec.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-70a47bd5681a7291082a5b9f83d58762.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+
+</head>
+
+<body class="nav-sidebar floating quarto-light">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../chapters/09-modeling-exercises.html">Part IV: Applied Practice</a></li><li class="breadcrumb-item"><a href="../chapters/10-ba-ai.html"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Business Analysis in the Age of AI</span></a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header sidebar-header-stacked">
+      <a href="../index.html" class="sidebar-logo-link">
+      </a>
+    <div class="sidebar-title mb-0 py-0">
+      <a href="../">Practical Business Analysis</a> 
+    </div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Preface</span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
+ <span class="menu-text">Part I: Foundations</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/01-welcome.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Welcome to Business Analysis</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/02-fundamentals.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Business Analysis Fundamentals</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true">
+ <span class="menu-text">Part II: Core Knowledge Areas</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/03-strategy.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Strategy: What Problem to Solve</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/04-planning.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Business Analysis Planning and Monitoring</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/05-elicitation.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Requirement Elicitation and Collaboration</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/06-lifecycle.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Requirement Lifecycle Management</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/07-analysis-design.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Requirements Analysis and Design Definition</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true">
+ <span class="menu-text">Part III: Agile Practice</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/08-agile-scrum.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Agile and Scrum</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true">
+ <span class="menu-text">Part IV: Applied Practice</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/09-modeling-exercises.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Modeling Exercises</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/10-ba-ai.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Business Analysis in the Age of AI</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/11-ba-disciplines.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Business Analysis Across Disciplines</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/12-ba-data-analytics.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Business Analysis in Data Analytics</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/13-capstone.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Innovate360 Capstone Project</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../references.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">References</span></a>
+  </div>
+</li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#ai-is-changing-everything" id="toc-ai-is-changing-everything" class="nav-link active" data-scroll-target="#ai-is-changing-everything"><span class="header-section-number">10.1</span> AI Is Changing Everything</a></li>
+  <li><a href="#how-ai-affects-business-analysis-work" id="toc-how-ai-affects-business-analysis-work" class="nav-link" data-scroll-target="#how-ai-affects-business-analysis-work"><span class="header-section-number">10.2</span> How AI Affects Business Analysis Work</a>
+  <ul class="collapse">
+  <li><a href="#data-analysis-at-scale" id="toc-data-analysis-at-scale" class="nav-link" data-scroll-target="#data-analysis-at-scale"><span class="header-section-number">10.2.1</span> Data Analysis at Scale</a></li>
+  <li><a href="#requirements-generation-and-refinement" id="toc-requirements-generation-and-refinement" class="nav-link" data-scroll-target="#requirements-generation-and-refinement"><span class="header-section-number">10.2.2</span> Requirements Generation and Refinement</a></li>
+  <li><a href="#documentation-and-communication" id="toc-documentation-and-communication" class="nav-link" data-scroll-target="#documentation-and-communication"><span class="header-section-number">10.2.3</span> Documentation and Communication</a></li>
+  <li><a href="#process-mining-and-optimization" id="toc-process-mining-and-optimization" class="nav-link" data-scroll-target="#process-mining-and-optimization"><span class="header-section-number">10.2.4</span> Process Mining and Optimization</a></li>
+  </ul></li>
+  <li><a href="#what-ai-cannot-replace" id="toc-what-ai-cannot-replace" class="nav-link" data-scroll-target="#what-ai-cannot-replace"><span class="header-section-number">10.3</span> What AI Cannot Replace</a>
+  <ul class="collapse">
+  <li><a href="#stakeholder-relationships" id="toc-stakeholder-relationships" class="nav-link" data-scroll-target="#stakeholder-relationships"><span class="header-section-number">10.3.1</span> Stakeholder Relationships</a></li>
+  <li><a href="#ethical-judgment" id="toc-ethical-judgment" class="nav-link" data-scroll-target="#ethical-judgment"><span class="header-section-number">10.3.2</span> Ethical Judgment</a></li>
+  <li><a href="#creative-problem-solving" id="toc-creative-problem-solving" class="nav-link" data-scroll-target="#creative-problem-solving"><span class="header-section-number">10.3.3</span> Creative Problem Solving</a></li>
+  <li><a href="#contextual-understanding" id="toc-contextual-understanding" class="nav-link" data-scroll-target="#contextual-understanding"><span class="header-section-number">10.3.4</span> Contextual Understanding</a></li>
+  </ul></li>
+  <li><a href="#ai-as-a-collaborator" id="toc-ai-as-a-collaborator" class="nav-link" data-scroll-target="#ai-as-a-collaborator"><span class="header-section-number">10.4</span> AI as a Collaborator</a></li>
+  <li><a href="#preparing-for-an-ai-enhanced-career" id="toc-preparing-for-an-ai-enhanced-career" class="nav-link" data-scroll-target="#preparing-for-an-ai-enhanced-career"><span class="header-section-number">10.5</span> Preparing for an AI-Enhanced Career</a>
+  <ul class="collapse">
+  <li><a href="#develop-ai-literacy" id="toc-develop-ai-literacy" class="nav-link" data-scroll-target="#develop-ai-literacy"><span class="header-section-number">10.5.1</span> Develop AI Literacy</a></li>
+  <li><a href="#strengthen-uniquely-human-skills" id="toc-strengthen-uniquely-human-skills" class="nav-link" data-scroll-target="#strengthen-uniquely-human-skills"><span class="header-section-number">10.5.2</span> Strengthen Uniquely Human Skills</a></li>
+  <li><a href="#learn-to-work-with-ai-tools" id="toc-learn-to-work-with-ai-tools" class="nav-link" data-scroll-target="#learn-to-work-with-ai-tools"><span class="header-section-number">10.5.3</span> Learn to Work with AI Tools</a></li>
+  <li><a href="#stay-current" id="toc-stay-current" class="nav-link" data-scroll-target="#stay-current"><span class="header-section-number">10.5.4</span> Stay Current</a></li>
+  </ul></li>
+  <li><a href="#ethical-considerations" id="toc-ethical-considerations" class="nav-link" data-scroll-target="#ethical-considerations"><span class="header-section-number">10.6</span> Ethical Considerations</a>
+  <ul class="collapse">
+  <li><a href="#bias-in-ai-systems" id="toc-bias-in-ai-systems" class="nav-link" data-scroll-target="#bias-in-ai-systems"><span class="header-section-number">10.6.1</span> Bias in AI Systems</a></li>
+  <li><a href="#transparency-and-explainability" id="toc-transparency-and-explainability" class="nav-link" data-scroll-target="#transparency-and-explainability"><span class="header-section-number">10.6.2</span> Transparency and Explainability</a></li>
+  <li><a href="#privacy-and-data-use" id="toc-privacy-and-data-use" class="nav-link" data-scroll-target="#privacy-and-data-use"><span class="header-section-number">10.6.3</span> Privacy and Data Use</a></li>
+  <li><a href="#job-displacement" id="toc-job-displacement" class="nav-link" data-scroll-target="#job-displacement"><span class="header-section-number">10.6.4</span> Job Displacement</a></li>
+  </ul></li>
+  <li><a href="#case-example-ai-enhanced-customer-service-analysis" id="toc-case-example-ai-enhanced-customer-service-analysis" class="nav-link" data-scroll-target="#case-example-ai-enhanced-customer-service-analysis"><span class="header-section-number">10.7</span> Case Example: AI-Enhanced Customer Service Analysis</a></li>
+  <li><a href="#looking-ahead" id="toc-looking-ahead" class="nav-link" data-scroll-target="#looking-ahead"><span class="header-section-number">10.8</span> Looking Ahead</a></li>
+  <li><a href="#reflection-questions" id="toc-reflection-questions" class="nav-link" data-scroll-target="#reflection-questions"><span class="header-section-number">10.9</span> Reflection Questions</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../chapters/09-modeling-exercises.html">Part IV: Applied Practice</a></li><li class="breadcrumb-item"><a href="../chapters/10-ba-ai.html"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Business Analysis in the Age of AI</span></a></li></ol></nav>
+<div class="quarto-title">
+<h1 class="title"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Business Analysis in the Age of AI</span></h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<p>The practice of Business Analysis is being transformed by artificial intelligence. This chapter explores how AI affects Business Analysis work and how you can prepare for a career in an AI-enhanced world.</p>
+<section id="ai-is-changing-everything" class="level2" data-number="10.1">
+<h2 data-number="10.1" class="anchored" data-anchor-id="ai-is-changing-everything"><span class="header-section-number">10.1</span> AI Is Changing Everything</h2>
+<p>Artificial intelligence is not a future possibility. It is a present reality that is reshaping industries and professions. As a Business Analyst, you need to understand these changes and position yourself to thrive.</p>
+<p>AI systems can now analyze vast amounts of data, identify patterns humans might miss, generate text and code, and automate tasks that previously required human judgment. These capabilities create both opportunities and challenges for Business Analysis professionals.</p>
+</section>
+<section id="how-ai-affects-business-analysis-work" class="level2" data-number="10.2">
+<h2 data-number="10.2" class="anchored" data-anchor-id="how-ai-affects-business-analysis-work"><span class="header-section-number">10.2</span> How AI Affects Business Analysis Work</h2>
+<p>AI affects Business Analysis in several ways.</p>
+<section id="data-analysis-at-scale" class="level3" data-number="10.2.1">
+<h3 data-number="10.2.1" class="anchored" data-anchor-id="data-analysis-at-scale"><span class="header-section-number">10.2.1</span> Data Analysis at Scale</h3>
+<p>Traditional Business Analysis often involves manually reviewing documents, spreadsheets, and system outputs to understand current state and identify issues. AI can process vastly more information in less time.</p>
+<p>Natural language processing can analyze thousands of customer feedback comments to identify common themes and sentiment patterns. Machine learning can detect anomalies in transaction data that might indicate fraud or process breakdowns. Predictive models can forecast demand, identify at-risk customers, or anticipate equipment failures.</p>
+<p>As a Business Analyst, you can leverage these capabilities to gain deeper insights faster. But you must also understand the limitations of AI analysis and maintain critical judgment about its outputs.</p>
+</section>
+<section id="requirements-generation-and-refinement" class="level3" data-number="10.2.2">
+<h3 data-number="10.2.2" class="anchored" data-anchor-id="requirements-generation-and-refinement"><span class="header-section-number">10.2.2</span> Requirements Generation and Refinement</h3>
+<p>AI tools can assist with generating user stories, drafting acceptance criteria, and identifying gaps in requirements. Given a high-level description of a feature, AI can suggest detailed requirements that a human analyst can then refine.</p>
+<p>This does not replace the Business Analyst. It augments their capabilities. The analyst still needs to validate that AI-generated requirements accurately reflect stakeholder needs, align with business goals, and are feasible to implement.</p>
+</section>
+<section id="documentation-and-communication" class="level3" data-number="10.2.3">
+<h3 data-number="10.2.3" class="anchored" data-anchor-id="documentation-and-communication"><span class="header-section-number">10.2.3</span> Documentation and Communication</h3>
+<p>AI can draft documents, summarize meeting notes, translate requirements into different formats, and generate visualizations. This reduces time spent on mechanical documentation tasks and frees analysts to focus on higher-value activities.</p>
+<p>However, AI-generated content requires careful review. AI may misunderstand context, make incorrect assumptions, or produce content that is technically correct but misses important nuances.</p>
+</section>
+<section id="process-mining-and-optimization" class="level3" data-number="10.2.4">
+<h3 data-number="10.2.4" class="anchored" data-anchor-id="process-mining-and-optimization"><span class="header-section-number">10.2.4</span> Process Mining and Optimization</h3>
+<p>AI-powered process mining tools can analyze system logs to discover how processes actually work, identify bottlenecks, and suggest optimizations. This provides objective data that supplements stakeholder interviews and observations.</p>
+<p>Business Analysts can use these insights to ask better questions and focus attention on the areas with greatest improvement potential.</p>
+</section>
+</section>
+<section id="what-ai-cannot-replace" class="level2" data-number="10.3">
+<h2 data-number="10.3" class="anchored" data-anchor-id="what-ai-cannot-replace"><span class="header-section-number">10.3</span> What AI Cannot Replace</h2>
+<p>Despite AI’s capabilities, certain aspects of Business Analysis remain distinctly human.</p>
+<section id="stakeholder-relationships" class="level3" data-number="10.3.1">
+<h3 data-number="10.3.1" class="anchored" data-anchor-id="stakeholder-relationships"><span class="header-section-number">10.3.1</span> Stakeholder Relationships</h3>
+<p>Building trust, understanding organizational politics, navigating conflicting interests, and facilitating consensus require human skills that AI cannot replicate. Stakeholders need to feel heard and understood. They need someone who can empathize with their challenges and advocate for their needs.</p>
+</section>
+<section id="ethical-judgment" class="level3" data-number="10.3.2">
+<h3 data-number="10.3.2" class="anchored" data-anchor-id="ethical-judgment"><span class="header-section-number">10.3.2</span> Ethical Judgment</h3>
+<p>Business decisions often involve ethical considerations that require human judgment. Should a system use certain data? What are the implications for privacy? Who might be harmed by a particular approach? These questions require wisdom, not just analysis.</p>
+</section>
+<section id="creative-problem-solving" class="level3" data-number="10.3.3">
+<h3 data-number="10.3.3" class="anchored" data-anchor-id="creative-problem-solving"><span class="header-section-number">10.3.3</span> Creative Problem Solving</h3>
+<p>While AI can generate options based on patterns in existing data, truly creative solutions often come from human insight, intuition, and the ability to draw connections across disparate domains.</p>
+</section>
+<section id="contextual-understanding" class="level3" data-number="10.3.4">
+<h3 data-number="10.3.4" class="anchored" data-anchor-id="contextual-understanding"><span class="header-section-number">10.3.4</span> Contextual Understanding</h3>
+<p>AI models work with patterns in data. They do not truly understand context, history, culture, or the unwritten rules that govern how organizations actually function. Business Analysts bring contextual understanding that enables them to interpret information appropriately.</p>
+</section>
+</section>
+<section id="ai-as-a-collaborator" class="level2" data-number="10.4">
+<h2 data-number="10.4" class="anchored" data-anchor-id="ai-as-a-collaborator"><span class="header-section-number">10.4</span> AI as a Collaborator</h2>
+<p>The most effective approach treats AI as a collaborator rather than a replacement. AI handles tasks it does well: processing large volumes of data, identifying patterns, generating drafts, automating repetitive work. Humans handle tasks they do well: building relationships, exercising judgment, providing context, making ethical decisions.</p>
+<p>This collaboration requires new skills. You must learn to craft effective prompts that get useful outputs from AI systems. You must develop the judgment to evaluate AI outputs critically. You must understand enough about how AI works to recognize its limitations.</p>
+</section>
+<section id="preparing-for-an-ai-enhanced-career" class="level2" data-number="10.5">
+<h2 data-number="10.5" class="anchored" data-anchor-id="preparing-for-an-ai-enhanced-career"><span class="header-section-number">10.5</span> Preparing for an AI-Enhanced Career</h2>
+<p>How should you prepare for Business Analysis in an AI-enhanced world?</p>
+<section id="develop-ai-literacy" class="level3" data-number="10.5.1">
+<h3 data-number="10.5.1" class="anchored" data-anchor-id="develop-ai-literacy"><span class="header-section-number">10.5.1</span> Develop AI Literacy</h3>
+<p>You do not need to become a data scientist or machine learning engineer. But you should understand basic AI concepts: how machine learning works, what neural networks do, what large language models can and cannot do, and how AI systems are trained and evaluated.</p>
+<p>This literacy helps you identify opportunities to apply AI, evaluate AI-based solutions, and communicate effectively with technical teams.</p>
+</section>
+<section id="strengthen-uniquely-human-skills" class="level3" data-number="10.5.2">
+<h3 data-number="10.5.2" class="anchored" data-anchor-id="strengthen-uniquely-human-skills"><span class="header-section-number">10.5.2</span> Strengthen Uniquely Human Skills</h3>
+<p>As AI handles more routine tasks, uniquely human skills become more valuable. Focus on developing communication skills, facilitation abilities, critical thinking, ethical reasoning, and emotional intelligence.</p>
+</section>
+<section id="learn-to-work-with-ai-tools" class="level3" data-number="10.5.3">
+<h3 data-number="10.5.3" class="anchored" data-anchor-id="learn-to-work-with-ai-tools"><span class="header-section-number">10.5.3</span> Learn to Work with AI Tools</h3>
+<p>Become proficient with AI tools relevant to Business Analysis. Practice using AI assistants for drafting documents, analyzing data, and generating ideas. Learn process mining tools. Explore AI-powered analytics platforms.</p>
+<p>The goal is not to become dependent on these tools but to understand their capabilities and integrate them effectively into your work.</p>
+</section>
+<section id="stay-current" class="level3" data-number="10.5.4">
+<h3 data-number="10.5.4" class="anchored" data-anchor-id="stay-current"><span class="header-section-number">10.5.4</span> Stay Current</h3>
+<p>AI capabilities are evolving rapidly. What AI cannot do today, it may do tomorrow. What seems like science fiction may become routine. Commit to continuous learning about AI developments and their implications for your profession.</p>
+</section>
+</section>
+<section id="ethical-considerations" class="level2" data-number="10.6">
+<h2 data-number="10.6" class="anchored" data-anchor-id="ethical-considerations"><span class="header-section-number">10.6</span> Ethical Considerations</h2>
+<p>AI raises important ethical questions that Business Analysts must consider.</p>
+<section id="bias-in-ai-systems" class="level3" data-number="10.6.1">
+<h3 data-number="10.6.1" class="anchored" data-anchor-id="bias-in-ai-systems"><span class="header-section-number">10.6.1</span> Bias in AI Systems</h3>
+<p>AI systems learn from historical data. If that data reflects biases, the AI will perpetuate those biases. A hiring system trained on historical hiring decisions may discriminate against groups that were historically underrepresented. A credit scoring system may unfairly penalize certain demographics.</p>
+<p>Business Analysts must ask critical questions about AI systems. What data was used for training? What biases might be present? How will the system affect different user groups? What safeguards exist against discriminatory outcomes?</p>
+</section>
+<section id="transparency-and-explainability" class="level3" data-number="10.6.2">
+<h3 data-number="10.6.2" class="anchored" data-anchor-id="transparency-and-explainability"><span class="header-section-number">10.6.2</span> Transparency and Explainability</h3>
+<p>Many AI systems operate as “black boxes” where it is difficult to explain why they produced a particular output. This creates challenges for accountability and trust.</p>
+<p>When evaluating AI solutions, consider whether the system’s decisions can be explained and justified. Stakeholders may need to understand why a recommendation was made, especially in high-stakes decisions.</p>
+</section>
+<section id="privacy-and-data-use" class="level3" data-number="10.6.3">
+<h3 data-number="10.6.3" class="anchored" data-anchor-id="privacy-and-data-use"><span class="header-section-number">10.6.3</span> Privacy and Data Use</h3>
+<p>AI systems often require large amounts of data, including potentially sensitive personal information. Business Analysts must consider privacy implications. Is the data collection appropriate? Are users aware of how their data is used? Are adequate protections in place?</p>
+</section>
+<section id="job-displacement" class="level3" data-number="10.6.4">
+<h3 data-number="10.6.4" class="anchored" data-anchor-id="job-displacement"><span class="header-section-number">10.6.4</span> Job Displacement</h3>
+<p>AI automation may eliminate some jobs while creating others. As a Business Analyst, you may be asked to recommend solutions that automate work currently done by humans. Consider the human impact of these recommendations and advocate for approaches that help affected workers transition.</p>
+</section>
+</section>
+<section id="case-example-ai-enhanced-customer-service-analysis" class="level2" data-number="10.7">
+<h2 data-number="10.7" class="anchored" data-anchor-id="case-example-ai-enhanced-customer-service-analysis"><span class="header-section-number">10.7</span> Case Example: AI-Enhanced Customer Service Analysis</h2>
+<p>A telecommunications company wanted to improve its customer service. The traditional approach would involve interviewing agents, observing calls, and manually reviewing sample interactions.</p>
+<p>The Business Analyst proposed an AI-enhanced approach. Natural language processing analyzed six months of call transcripts, identifying common issues, successful resolution patterns, and points where conversations went wrong.</p>
+<p>Machine learning models predicted which customer inquiries were likely to escalate based on early signals in the conversation. Sentiment analysis tracked customer emotion throughout calls.</p>
+<p>The AI analysis revealed insights that manual review would have missed. Customers became frustrated not when they had to wait, but when they had to repeat information they had already provided. Certain phrases by agents consistently de-escalated tense situations. The most successful agents asked specific diagnostic questions early in calls.</p>
+<p>These insights informed process redesigns and training programs that improved customer satisfaction scores significantly.</p>
+<p>But AI analysis alone was not sufficient. The Business Analyst conducted follow-up interviews to understand why certain patterns existed. She facilitated workshops to build consensus around changes. She worked with the training team to develop materials that agents would actually use.</p>
+<p>The AI accelerated analysis and revealed patterns. The human analyst provided context, facilitated change, and ensured implementation.</p>
+</section>
+<section id="looking-ahead" class="level2" data-number="10.8">
+<h2 data-number="10.8" class="anchored" data-anchor-id="looking-ahead"><span class="header-section-number">10.8</span> Looking Ahead</h2>
+<p>AI will continue to evolve. The Business Analysis profession will evolve with it. Those who embrace AI as a tool while developing distinctly human capabilities will thrive. Those who resist change or fail to adapt may find their skills less relevant.</p>
+<p>Your goal is not to compete with AI but to complement it. By combining AI capabilities with human judgment, relationship skills, and contextual understanding, you can deliver value that neither humans nor AI could achieve alone.</p>
+<p>The next chapter explores how Business Analysis skills apply across different business disciplines.</p>
+</section>
+<section id="reflection-questions" class="level2" data-number="10.9">
+<h2 data-number="10.9" class="anchored" data-anchor-id="reflection-questions"><span class="header-section-number">10.9</span> Reflection Questions</h2>
+<ol type="1">
+<li>How might AI change the specific Business Analysis tasks you expect to perform in your career?</li>
+<li>What uniquely human skills do you want to develop to complement AI capabilities?</li>
+<li>What ethical concerns about AI do you think are most important for Business Analysts to consider?</li>
+<li>How will you stay current on AI developments relevant to your profession?</li>
+</ol>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="../chapters/09-modeling-exercises.html" class="pagination-link" aria-label="Modeling Exercises">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Modeling Exercises</span></span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="../chapters/11-ba-disciplines.html" class="pagination-link" aria-label="Business Analysis Across Disciplines">
+        <span class="nav-page-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Business Analysis Across Disciplines</span></span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+
+
+
+
+</body></html>

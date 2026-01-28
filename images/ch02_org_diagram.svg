@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450">
+  <!-- Background -->
+  <rect width="800" height="450" fill="#f8fafc"/>
+  
+  <!-- Title -->
+  <text x="400" y="35" font-family="Arial, sans-serif" font-size="20" font-weight="bold" text-anchor="middle" fill="#1e293b">Business Analyst Position in Organizations</text>
+  
+  <!-- CEO Box -->
+  <rect x="325" y="60" width="150" height="50" rx="8" fill="#1e40af" stroke="#1e3a8a" stroke-width="2"/>
+  <text x="400" y="90" font-family="Arial, sans-serif" font-size="14" font-weight="bold" text-anchor="middle" fill="white">CEO / Executive</text>
+  
+  <!-- Manager Box -->
+  <rect x="325" y="140" width="150" height="50" rx="8" fill="#3b82f6" stroke="#2563eb" stroke-width="2"/>
+  <text x="400" y="170" font-family="Arial, sans-serif" font-size="14" font-weight="bold" text-anchor="middle" fill="white">Manager</text>
+  
+  <!-- Line from CEO to Manager -->
+  <line x1="400" y1="110" x2="400" y2="140" stroke="#64748b" stroke-width="2"/>
+  
+  <!-- Business Side -->
+  <rect x="100" y="240" width="180" height="120" rx="10" fill="#dcfce7" stroke="#22c55e" stroke-width="3"/>
+  <text x="190" y="275" font-family="Arial, sans-serif" font-size="16" font-weight="bold" text-anchor="middle" fill="#15803d">BUSINESS</text>
+  <text x="190" y="300" font-family="Arial, sans-serif" font-size="11" text-anchor="middle" fill="#166534">• Operations</text>
+  <text x="190" y="318" font-family="Arial, sans-serif" font-size="11" text-anchor="middle" fill="#166534">• Finance</text>
+  <text x="190" y="336" font-family="Arial, sans-serif" font-size="11" text-anchor="middle" fill="#166534">• Marketing</text>
+  
+  <!-- IT Side -->
+  <rect x="520" y="240" width="180" height="120" rx="10" fill="#dbeafe" stroke="#3b82f6" stroke-width="3"/>
+  <text x="610" y="275" font-family="Arial, sans-serif" font-size="16" font-weight="bold" text-anchor="middle" fill="#1e40af">IT TEAM</text>
+  <text x="610" y="300" font-family="Arial, sans-serif" font-size="11" text-anchor="middle" fill="#1e40af">• Developers</text>
+  <text x="610" y="318" font-family="Arial, sans-serif" font-size="11" text-anchor="middle" fill="#1e40af">• Architects</text>
+  <text x="610" y="336" font-family="Arial, sans-serif" font-size="11" text-anchor="middle" fill="#1e40af">• Support</text>
+  
+  <!-- Business Analyst Box (Center) -->
+  <rect x="310" y="260" width="180" height="80" rx="10" fill="#fef3c7" stroke="#f59e0b" stroke-width="4"/>
+  <text x="400" y="295" font-family="Arial, sans-serif" font-size="14" font-weight="bold" text-anchor="middle" fill="#b45309">BUSINESS</text>
+  <text x="400" y="315" font-family="Arial, sans-serif" font-size="14" font-weight="bold" text-anchor="middle" fill="#b45309">ANALYSTS</text>
+  
+  <!-- Lines from Manager -->
+  <line x1="340" y1="190" x2="190" y2="240" stroke="#64748b" stroke-width="2"/>
+  <line x1="400" y1="190" x2="400" y2="260" stroke="#64748b" stroke-width="2"/>
+  <line x1="460" y1="190" x2="610" y2="240" stroke="#64748b" stroke-width="2"/>
+  
+  <!-- Double-headed arrows showing BA bridge -->
+  <defs>
+    <marker id="arrowBoth" markerWidth="10" markerHeight="7" refX="5" refY="3.5" orient="auto-start-reverse">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#f59e0b"/>
+    </marker>
+  </defs>
+  <line x1="285" y1="300" x2="305" y2="300" stroke="#f59e0b" stroke-width="3" marker-start="url(#arrowBoth)"/>
+  <line x1="495" y1="300" x2="515" y2="300" stroke="#f59e0b" stroke-width="3" marker-end="url(#arrowBoth)"/>
+  
+  <!-- Legend Box -->
+  <rect x="150" y="385" width="500" height="50" rx="8" fill="#fff7ed" stroke="#fed7aa" stroke-width="2"/>
+  <text x="400" y="408" font-family="Arial, sans-serif" font-size="12" font-weight="bold" text-anchor="middle" fill="#c2410c">Business Analysts bridge the gap between Business and IT</text>
+  <text x="400" y="425" font-family="Arial, sans-serif" font-size="11" text-anchor="middle" fill="#9a3412">They translate business needs into technical requirements and vice versa</text>
+</svg>

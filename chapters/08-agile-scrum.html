@@ -1,0 +1,948 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.8.25">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>8&nbsp; Agile and Scrum – Practical Business Analysis</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<link href="../chapters/09-modeling-exercises.html" rel="next">
+<link href="../chapters/07-analysis-design.html" rel="prev">
+<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-7b89279ff1a6dce999919e0e67d4d9ec.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-70a47bd5681a7291082a5b9f83d58762.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+
+</head>
+
+<body class="nav-sidebar floating quarto-light">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../chapters/08-agile-scrum.html">Part III: Agile Practice</a></li><li class="breadcrumb-item"><a href="../chapters/08-agile-scrum.html"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Agile and Scrum</span></a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header sidebar-header-stacked">
+      <a href="../index.html" class="sidebar-logo-link">
+      </a>
+    <div class="sidebar-title mb-0 py-0">
+      <a href="../">Practical Business Analysis</a> 
+    </div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Preface</span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
+ <span class="menu-text">Part I: Foundations</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/01-welcome.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Welcome to Business Analysis</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/02-fundamentals.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Business Analysis Fundamentals</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true">
+ <span class="menu-text">Part II: Core Knowledge Areas</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/03-strategy.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Strategy: What Problem to Solve</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/04-planning.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Business Analysis Planning and Monitoring</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/05-elicitation.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Requirement Elicitation and Collaboration</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/06-lifecycle.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Requirement Lifecycle Management</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/07-analysis-design.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Requirements Analysis and Design Definition</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true">
+ <span class="menu-text">Part III: Agile Practice</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/08-agile-scrum.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Agile and Scrum</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true">
+ <span class="menu-text">Part IV: Applied Practice</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/09-modeling-exercises.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Modeling Exercises</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/10-ba-ai.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Business Analysis in the Age of AI</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/11-ba-disciplines.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Business Analysis Across Disciplines</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/12-ba-data-analytics.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Business Analysis in Data Analytics</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/13-capstone.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Innovate360 Capstone Project</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../references.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">References</span></a>
+  </div>
+</li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#the-agile-mindset" id="toc-the-agile-mindset" class="nav-link active" data-scroll-target="#the-agile-mindset"><span class="header-section-number">8.1</span> The Agile Mindset</a></li>
+  <li><a href="#why-agile-emerged" id="toc-why-agile-emerged" class="nav-link" data-scroll-target="#why-agile-emerged"><span class="header-section-number">8.2</span> Why Agile Emerged</a></li>
+  <li><a href="#scrum-the-dominant-agile-framework" id="toc-scrum-the-dominant-agile-framework" class="nav-link" data-scroll-target="#scrum-the-dominant-agile-framework"><span class="header-section-number">8.3</span> Scrum: The Dominant Agile Framework</a></li>
+  <li><a href="#scrum-roles" id="toc-scrum-roles" class="nav-link" data-scroll-target="#scrum-roles"><span class="header-section-number">8.4</span> Scrum Roles</a>
+  <ul class="collapse">
+  <li><a href="#product-owner" id="toc-product-owner" class="nav-link" data-scroll-target="#product-owner"><span class="header-section-number">8.4.1</span> Product Owner</a></li>
+  <li><a href="#scrum-master" id="toc-scrum-master" class="nav-link" data-scroll-target="#scrum-master"><span class="header-section-number">8.4.2</span> Scrum Master</a></li>
+  <li><a href="#development-team" id="toc-development-team" class="nav-link" data-scroll-target="#development-team"><span class="header-section-number">8.4.3</span> Development Team</a></li>
+  </ul></li>
+  <li><a href="#scrum-events" id="toc-scrum-events" class="nav-link" data-scroll-target="#scrum-events"><span class="header-section-number">8.5</span> Scrum Events</a>
+  <ul class="collapse">
+  <li><a href="#the-sprint" id="toc-the-sprint" class="nav-link" data-scroll-target="#the-sprint"><span class="header-section-number">8.5.1</span> The Sprint</a></li>
+  <li><a href="#sprint-planning" id="toc-sprint-planning" class="nav-link" data-scroll-target="#sprint-planning"><span class="header-section-number">8.5.2</span> Sprint Planning</a></li>
+  <li><a href="#daily-scrum" id="toc-daily-scrum" class="nav-link" data-scroll-target="#daily-scrum"><span class="header-section-number">8.5.3</span> Daily Scrum</a></li>
+  <li><a href="#sprint-review" id="toc-sprint-review" class="nav-link" data-scroll-target="#sprint-review"><span class="header-section-number">8.5.4</span> Sprint Review</a></li>
+  <li><a href="#sprint-retrospective" id="toc-sprint-retrospective" class="nav-link" data-scroll-target="#sprint-retrospective"><span class="header-section-number">8.5.5</span> Sprint Retrospective</a></li>
+  </ul></li>
+  <li><a href="#scrum-artifacts" id="toc-scrum-artifacts" class="nav-link" data-scroll-target="#scrum-artifacts"><span class="header-section-number">8.6</span> Scrum Artifacts</a>
+  <ul class="collapse">
+  <li><a href="#product-backlog" id="toc-product-backlog" class="nav-link" data-scroll-target="#product-backlog"><span class="header-section-number">8.6.1</span> Product Backlog</a></li>
+  <li><a href="#sprint-backlog" id="toc-sprint-backlog" class="nav-link" data-scroll-target="#sprint-backlog"><span class="header-section-number">8.6.2</span> Sprint Backlog</a></li>
+  <li><a href="#product-increment" id="toc-product-increment" class="nav-link" data-scroll-target="#product-increment"><span class="header-section-number">8.6.3</span> Product Increment</a></li>
+  </ul></li>
+  <li><a href="#scrum-values-and-pillars" id="toc-scrum-values-and-pillars" class="nav-link" data-scroll-target="#scrum-values-and-pillars"><span class="header-section-number">8.7</span> Scrum Values and Pillars</a></li>
+  <li><a href="#the-minimum-viable-product" id="toc-the-minimum-viable-product" class="nav-link" data-scroll-target="#the-minimum-viable-product"><span class="header-section-number">8.8</span> The Minimum Viable Product</a></li>
+  <li><a href="#user-personas" id="toc-user-personas" class="nav-link" data-scroll-target="#user-personas"><span class="header-section-number">8.9</span> User Personas</a></li>
+  <li><a href="#the-business-analyst-in-scrum" id="toc-the-business-analyst-in-scrum" class="nav-link" data-scroll-target="#the-business-analyst-in-scrum"><span class="header-section-number">8.10</span> The Business Analyst in Scrum</a></li>
+  <li><a href="#case-example-the-mobile-banking-app" id="toc-case-example-the-mobile-banking-app" class="nav-link" data-scroll-target="#case-example-the-mobile-banking-app"><span class="header-section-number">8.11</span> Case Example: The Mobile Banking App</a></li>
+  <li><a href="#review-questions" id="toc-review-questions" class="nav-link" data-scroll-target="#review-questions"><span class="header-section-number">8.12</span> Review Questions</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../chapters/08-agile-scrum.html">Part III: Agile Practice</a></li><li class="breadcrumb-item"><a href="../chapters/08-agile-scrum.html"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Agile and Scrum</span></a></li></ol></nav>
+<div class="quarto-title">
+<h1 class="title"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Agile and Scrum</span></h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<p>The previous chapters presented Business Analysis techniques that work in any methodology. Now we focus specifically on Agile environments, where Business Analysis adapts to iterative, collaborative approaches that dominate modern software development.</p>
+<section id="the-agile-mindset" class="level2" data-number="8.1">
+<h2 data-number="8.1" class="anchored" data-anchor-id="the-agile-mindset"><span class="header-section-number">8.1</span> The Agile Mindset</h2>
+<p>Agile is not just a methodology. It is a mindset that values certain principles over traditional approaches.</p>
+<p>Agile values individuals and interactions over processes and tools. This does not mean processes and tools are unimportant. It means that when forced to choose, we prioritize people.</p>
+<p>Agile values working software over comprehensive documentation. Again, documentation has value. But working software that meets user needs matters more than perfect documents that describe software that does not exist.</p>
+<p>Agile values customer collaboration over contract negotiation. Relationships and ongoing dialogue produce better outcomes than rigid contractual requirements.</p>
+<p>Agile values responding to change over following a plan. Plans are useful, but the ability to adapt when circumstances change is more valuable than stubbornly following an outdated plan.</p>
+</section>
+<section id="why-agile-emerged" class="level2" data-number="8.2">
+<h2 data-number="8.2" class="anchored" data-anchor-id="why-agile-emerged"><span class="header-section-number">8.2</span> Why Agile Emerged</h2>
+<p>Traditional software development often followed the Waterfall approach: gather all requirements, complete all design, build everything, then test. This approach works well when requirements are stable and well-understood.</p>
+<p>But many software projects do not fit that profile. Requirements are unclear at the start. User needs evolve as they see working software. Technology changes rapidly. Competition demands quick responses.</p>
+<p>Agile emerged to address these realities. Instead of trying to predict everything upfront, Agile embraces uncertainty. It delivers working software in short cycles, learns from each delivery, and adapts based on what is learned.</p>
+</section>
+<section id="scrum-the-dominant-agile-framework" class="level2" data-number="8.3">
+<h2 data-number="8.3" class="anchored" data-anchor-id="scrum-the-dominant-agile-framework"><span class="header-section-number">8.3</span> Scrum: The Dominant Agile Framework</h2>
+<div id="fig-scrum-framework" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Scrum framework showing sprints, events, and artifacts">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-scrum-framework-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="../images/ch08_scrum_framework.svg" class="img-fluid figure-img" alt="Scrum framework showing sprints, events, and artifacts">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-scrum-framework-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;8.1: The Scrum framework organizes work into time-boxed iterations called sprints, with defined roles, events, and artifacts.
+</figcaption>
+</figure>
+</div>
+<p>Scrum (<a href="#fig-scrum-framework" class="quarto-xref">Figure&nbsp;<span>8.1</span></a>) is a lightweight agile project management framework mainly used for software development. Its goal is producing the highest business value in the shortest time.</p>
+<p>Scrum organizes work into sprints, which are time-boxed iterations typically lasting one to four weeks. At the end of each sprint, the team delivers a potentially shippable product increment.</p>
+</section>
+<section id="scrum-roles" class="level2" data-number="8.4">
+<h2 data-number="8.4" class="anchored" data-anchor-id="scrum-roles"><span class="header-section-number">8.4</span> Scrum Roles</h2>
+<div id="fig-scrum-roles" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Three Scrum roles with their responsibilities">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-scrum-roles-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="../images/ch08_scrum_roles.svg" class="img-fluid figure-img" alt="Three Scrum roles with their responsibilities">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-scrum-roles-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;8.2: Scrum defines three roles with distinct responsibilities: Product Owner, Scrum Master, and Development Team.
+</figcaption>
+</figure>
+</div>
+<p>Scrum defines three roles (<a href="#fig-scrum-roles" class="quarto-xref">Figure&nbsp;<span>8.2</span></a>), each with specific responsibilities.</p>
+<section id="product-owner" class="level3" data-number="8.4.1">
+<h3 data-number="8.4.1" class="anchored" data-anchor-id="product-owner"><span class="header-section-number">8.4.1</span> Product Owner</h3>
+<p>The Product Owner represents the customer and stakeholders. This person owns “what” and “why” the team builds things.</p>
+<p>Responsibilities include managing the product backlog (creating, maintaining, and prioritizing items), communicating the product vision to the team, deciding on releases, managing stakeholder expectations, monitoring progress, and making decisions about what to build.</p>
+<p>The Product Owner must be available to answer questions and make decisions. When the Product Owner is unavailable or indecisive, the team stalls.</p>
+</section>
+<section id="scrum-master" class="level3" data-number="8.4.2">
+<h3 data-number="8.4.2" class="anchored" data-anchor-id="scrum-master"><span class="header-section-number">8.4.2</span> Scrum Master</h3>
+<p>The Scrum Master facilitates the Scrum process. This person helps the team follow Scrum practices, removes obstacles that block progress, and protects the team from external distractions.</p>
+<p>The Scrum Master is not a project manager who assigns tasks. Instead, the Scrum Master enables the team to self-organize and coaches them on continuous improvement.</p>
+</section>
+<section id="development-team" class="level3" data-number="8.4.3">
+<h3 data-number="8.4.3" class="anchored" data-anchor-id="development-team"><span class="header-section-number">8.4.3</span> Development Team</h3>
+<p>The Development Team consists of professionals who do the work of delivering the product increment. Team members own “how” and “how quickly” work is delivered.</p>
+<p>The team is typically five to nine members. Teams smaller than five may lack necessary skills. Teams larger than nine have too much coordination overhead.</p>
+<p>Effective Scrum teams share several characteristics. They share norms and rules. They hold each other accountable for delivery. They work as autonomously as possible. They are empowered to make decisions. Skills are shared rather than siloed. Members ideally work full-time on the team.</p>
+</section>
+</section>
+<section id="scrum-events" class="level2" data-number="8.5">
+<h2 data-number="8.5" class="anchored" data-anchor-id="scrum-events"><span class="header-section-number">8.5</span> Scrum Events</h2>
+<p>All Scrum events are time-boxed, meaning they have a maximum duration that cannot be exceeded.</p>
+<section id="the-sprint" class="level3" data-number="8.5.1">
+<h3 data-number="8.5.1" class="anchored" data-anchor-id="the-sprint"><span class="header-section-number">8.5.1</span> The Sprint</h3>
+<p>The sprint is the heart of Scrum. It is a time-boxed iteration, typically one to four weeks, during which the team creates a potentially shippable product increment.</p>
+<p>Sprints have goals that define what the team aims to accomplish. The “definition of done” establishes criteria for determining whether work is complete.</p>
+<p>Sprints should not exceed one calendar month because longer periods increase the risk that requirements will change before delivery.</p>
+</section>
+<section id="sprint-planning" class="level3" data-number="8.5.2">
+<h3 data-number="8.5.2" class="anchored" data-anchor-id="sprint-planning"><span class="header-section-number">8.5.2</span> Sprint Planning</h3>
+<p>Sprint planning occurs on the first day of each sprint. The team decides what work to commit to during the sprint.</p>
+<p>The Product Owner presents the highest-priority items from the product backlog. The Development Team discusses what they can accomplish and selects items for the sprint backlog.</p>
+<p>For a two-week sprint, sprint planning typically takes about four hours.</p>
+</section>
+<section id="daily-scrum" class="level3" data-number="8.5.3">
+<h3 data-number="8.5.3" class="anchored" data-anchor-id="daily-scrum"><span class="header-section-number">8.5.3</span> Daily Scrum</h3>
+<p>The daily scrum is a fifteen-minute meeting held every morning at the same time. All Development Team members attend. The Scrum Master facilitates. The Product Owner may attend but is not required.</p>
+<p>Each team member answers three questions: What did I accomplish yesterday? What will I work on today? What obstacles are blocking my progress?</p>
+<p>The daily scrum is not a status meeting for management. It is a coordination meeting for the team.</p>
+</section>
+<section id="sprint-review" class="level3" data-number="8.5.4">
+<h3 data-number="8.5.4" class="anchored" data-anchor-id="sprint-review"><span class="header-section-number">8.5.4</span> Sprint Review</h3>
+<p>The sprint review occurs near the end of the sprint. The team demonstrates what they accomplished to the Product Owner and stakeholders.</p>
+<p>The Product Owner determines whether the increment meets acceptance criteria and decides whether to release it.</p>
+<p>For a two-week sprint, the review typically takes about two hours.</p>
+</section>
+<section id="sprint-retrospective" class="level3" data-number="8.5.5">
+<h3 data-number="8.5.5" class="anchored" data-anchor-id="sprint-retrospective"><span class="header-section-number">8.5.5</span> Sprint Retrospective</h3>
+<p>The sprint retrospective occurs at the end of each sprint. The team reflects on how they worked together and identifies improvements.</p>
+<p>Common retrospective questions include: What should we start doing? What should we stop doing? What should we keep doing?</p>
+<p>For a two-week sprint, the retrospective typically takes about ninety minutes.</p>
+</section>
+</section>
+<section id="scrum-artifacts" class="level2" data-number="8.6">
+<h2 data-number="8.6" class="anchored" data-anchor-id="scrum-artifacts"><span class="header-section-number">8.6</span> Scrum Artifacts</h2>
+<section id="product-backlog" class="level3" data-number="8.6.1">
+<h3 data-number="8.6.1" class="anchored" data-anchor-id="product-backlog"><span class="header-section-number">8.6.1</span> Product Backlog</h3>
+<p>The product backlog is a prioritized list of everything the product might include. The Product Owner owns this list and is responsible for its content and prioritization.</p>
+<p>Backlog items are ordered by value, with the highest-value items at the top. Items at the top are refined and ready for development. Items lower in the backlog may be less detailed.</p>
+</section>
+<section id="sprint-backlog" class="level3" data-number="8.6.2">
+<h3 data-number="8.6.2" class="anchored" data-anchor-id="sprint-backlog"><span class="header-section-number">8.6.2</span> Sprint Backlog</h3>
+<p>The sprint backlog contains the items the team has committed to complete during the current sprint. The Development Team owns this list and decides what to include based on their capacity.</p>
+<p>The Product Owner and Scrum Master should not dictate what goes into the sprint backlog. The team that does the work estimates the work and commits to it.</p>
+</section>
+<section id="product-increment" class="level3" data-number="8.6.3">
+<h3 data-number="8.6.3" class="anchored" data-anchor-id="product-increment"><span class="header-section-number">8.6.3</span> Product Increment</h3>
+<p>The product increment is what the team delivers at the end of each sprint. It must be potentially shippable, meaning it meets the definition of done and could be released if the Product Owner chooses.</p>
+<p>The Product Owner decides whether to actually release each increment or wait until more features are complete.</p>
+</section>
+</section>
+<section id="scrum-values-and-pillars" class="level2" data-number="8.7">
+<h2 data-number="8.7" class="anchored" data-anchor-id="scrum-values-and-pillars"><span class="header-section-number">8.7</span> Scrum Values and Pillars</h2>
+<div id="fig-scrum-pillars" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Three Scrum pillars with Scrum values">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-scrum-pillars-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="../images/ch08_scrum_pillars.svg" class="img-fluid figure-img" alt="Three Scrum pillars with Scrum values">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-scrum-pillars-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;8.3: Scrum is built on three pillars: transparency, inspection, and adaptation.
+</figcaption>
+</figure>
+</div>
+<p>Scrum rests on three pillars (<a href="#fig-scrum-pillars" class="quarto-xref">Figure&nbsp;<span>8.3</span></a>).</p>
+<p><strong>Transparency</strong> means that significant aspects of the process are visible to those responsible for outcomes. Everyone sees the same information.</p>
+<p><strong>Inspection</strong> means frequently checking progress toward sprint goals to detect problems early.</p>
+<p><strong>Adaptation</strong> means adjusting processes as soon as problems are detected to minimize further deviation.</p>
+<p>Scrum values support these pillars: commitment to achieving goals, courage to do the right thing, focus on sprint work, openness about challenges, and respect for team members.</p>
+</section>
+<section id="the-minimum-viable-product" class="level2" data-number="8.8">
+<h2 data-number="8.8" class="anchored" data-anchor-id="the-minimum-viable-product"><span class="header-section-number">8.8</span> The Minimum Viable Product</h2>
+<p>The Minimum Viable Product (MVP) is a product that includes core features without advanced features. It solves the problem and can be used, but only includes what is absolutely necessary.</p>
+<p>The MVP concept enables early delivery and learning. Instead of waiting until everything is built, teams deliver the minimum that provides value, then learn from user feedback and iterate.</p>
+<p>Think about it this way: the MVP for a lightbulb might be a candle. The goal of producing light is accomplished. Then you iterate toward better solutions.</p>
+</section>
+<section id="user-personas" class="level2" data-number="8.9">
+<h2 data-number="8.9" class="anchored" data-anchor-id="user-personas"><span class="header-section-number">8.9</span> User Personas</h2>
+<p>A user persona is a representation of a type of customer. Personas help teams understand who they are building for and make better decisions about features and priorities.</p>
+<p>Personas typically include demographic information, goals and motivations, frustrations and pain points, and behavioral patterns. They are based on research with actual users, not assumptions.</p>
+</section>
+<section id="the-business-analyst-in-scrum" class="level2" data-number="8.10">
+<h2 data-number="8.10" class="anchored" data-anchor-id="the-business-analyst-in-scrum"><span class="header-section-number">8.10</span> The Business Analyst in Scrum</h2>
+<p>Where does the Business Analyst fit in Scrum? The framework does not define a Business Analyst role. Business Analysis work still happens, but it is distributed differently.</p>
+<p>In some organizations, the Business Analyst serves as the Product Owner or assists the Product Owner with backlog management and stakeholder communication.</p>
+<p>In other organizations, the Business Analyst is part of the Development Team, contributing analysis skills to refining user stories, defining acceptance criteria, and ensuring requirements are understood.</p>
+<p>The key is that Business Analysis competencies remain valuable regardless of how roles are structured. Someone must understand stakeholder needs, translate them into requirements, and ensure solutions deliver value. Scrum changes how this work is organized, not whether it is needed.</p>
+</section>
+<section id="case-example-the-mobile-banking-app" class="level2" data-number="8.11">
+<h2 data-number="8.11" class="anchored" data-anchor-id="case-example-the-mobile-banking-app"><span class="header-section-number">8.11</span> Case Example: The Mobile Banking App</h2>
+<p>First Regional Bank decided to build a mobile banking app. They chose Scrum because requirements were unclear, competitors were moving quickly, and user expectations were evolving.</p>
+<p>The Product Owner was a senior banker who understood customer needs. The Scrum Master was an experienced agile coach. The Development Team included developers, testers, a UX designer, and a Business Analyst.</p>
+<p>The Business Analyst focused on refining user stories. When the Product Owner said “customers should be able to transfer money,” the Business Analyst asked clarifying questions. Between which accounts? With what limits? What confirmation is needed? What happens if the transfer fails?</p>
+<p>These conversations produced detailed acceptance criteria that the Development Team could implement and test.</p>
+<p>Sprint 1 delivered basic account viewing. Sprint 2 added internal transfers. Sprint 3 added external transfers. Sprint 4 added bill payment. Each sprint produced working software that users could test.</p>
+<p>User feedback after Sprint 2 revealed that the transfer confirmation screen was confusing. The team adjusted the design in Sprint 3. If they had followed Waterfall, this problem would not have been discovered until after full development was complete.</p>
+<p>The app launched after twelve sprints. It was not feature-complete compared to competitor apps, but it met core user needs. Subsequent sprints added features based on actual user feedback rather than assumptions.</p>
+<p>Now that you understand how Business Analysis adapts to Agile environments, let us apply what you have learned through hands-on modeling exercises.</p>
+</section>
+<section id="review-questions" class="level2" data-number="8.12">
+<h2 data-number="8.12" class="anchored" data-anchor-id="review-questions"><span class="header-section-number">8.12</span> Review Questions</h2>
+<ol type="1">
+<li><p>In Scrum, who is responsible for managing and prioritizing the product backlog?</p>
+<ol type="a">
+<li>Scrum Master</li>
+<li>Product Owner</li>
+<li>Development Team</li>
+<li>Project Manager</li>
+</ol></li>
+<li><p>What is the typical duration of a daily scrum meeting?</p>
+<ol type="a">
+<li>One hour</li>
+<li>Thirty minutes</li>
+<li>Fifteen minutes</li>
+<li>As long as needed</li>
+</ol></li>
+<li><p>What does MVP stand for, and what does it represent?</p>
+<ol type="a">
+<li>Most Valuable Player; the best team member</li>
+<li>Minimum Viable Product; a product with only core features</li>
+<li>Maximum Value Proposition; the full feature set</li>
+<li>Managed Version Plan; the release schedule</li>
+</ol></li>
+<li><p>Which Scrum event focuses on how the team worked together and identifies improvements?</p>
+<ol type="a">
+<li>Sprint Planning</li>
+<li>Daily Scrum</li>
+<li>Sprint Review</li>
+<li>Sprint Retrospective</li>
+</ol></li>
+<li><p>The three pillars of Scrum are:</p>
+<ol type="a">
+<li>Planning, Execution, Delivery</li>
+<li>Transparency, Inspection, Adaptation</li>
+<li>Commitment, Focus, Respect</li>
+<li>Backlog, Sprint, Increment</li>
+</ol></li>
+</ol>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Answer Key
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-1" class="callout-1-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>1-b, 2-c, 3-b, 4-d, 5-b</p>
+</div>
+</div>
+</div>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="../chapters/07-analysis-design.html" class="pagination-link" aria-label="Requirements Analysis and Design Definition">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Requirements Analysis and Design Definition</span></span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="../chapters/09-modeling-exercises.html" class="pagination-link" aria-label="Modeling Exercises">
+        <span class="nav-page-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Modeling Exercises</span></span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+
+
+
+
+</body></html>

@@ -1,0 +1,104 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 350">
+  <!-- Background -->
+  <rect width="900" height="350" fill="#f8fafc"/>
+  
+  <!-- Title -->
+  <text x="450" y="30" font-family="Arial, sans-serif" font-size="18" font-weight="bold" text-anchor="middle" fill="#1e293b">Software Development Life Cycle (SDLC) Phases</text>
+  
+  <!-- Arrow base -->
+  <defs>
+    <marker id="sdlcArrow" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#64748b"/>
+    </marker>
+  </defs>
+  
+  <!-- Phase boxes -->
+  <!-- Conception -->
+  <rect x="30" y="80" width="95" height="70" rx="6" fill="#3b82f6" stroke="#1d4ed8" stroke-width="2"/>
+  <text x="77" y="110" font-family="Arial, sans-serif" font-size="11" font-weight="bold" text-anchor="middle" fill="white">Conception</text>
+  <text x="77" y="125" font-family="Arial, sans-serif" font-size="8" text-anchor="middle" fill="#bfdbfe">(Pre-Project)</text>
+  
+  <!-- Initiation -->
+  <rect x="140" y="80" width="95" height="70" rx="6" fill="#6366f1" stroke="#4f46e5" stroke-width="2"/>
+  <text x="187" y="115" font-family="Arial, sans-serif" font-size="11" font-weight="bold" text-anchor="middle" fill="white">Initiation</text>
+  
+  <!-- Analysis -->
+  <rect x="250" y="80" width="95" height="70" rx="6" fill="#8b5cf6" stroke="#7c3aed" stroke-width="2"/>
+  <text x="297" y="115" font-family="Arial, sans-serif" font-size="11" font-weight="bold" text-anchor="middle" fill="white">Analysis</text>
+  
+  <!-- Design -->
+  <rect x="360" y="80" width="95" height="70" rx="6" fill="#a855f7" stroke="#9333ea" stroke-width="2"/>
+  <text x="407" y="115" font-family="Arial, sans-serif" font-size="11" font-weight="bold" text-anchor="middle" fill="white">Design</text>
+  
+  <!-- Development -->
+  <rect x="470" y="80" width="95" height="70" rx="6" fill="#c026d3" stroke="#a21caf" stroke-width="2"/>
+  <text x="517" y="115" font-family="Arial, sans-serif" font-size="11" font-weight="bold" text-anchor="middle" fill="white">Development</text>
+  
+  <!-- Testing -->
+  <rect x="580" y="80" width="95" height="70" rx="6" fill="#db2777" stroke="#be185d" stroke-width="2"/>
+  <text x="627" y="115" font-family="Arial, sans-serif" font-size="11" font-weight="bold" text-anchor="middle" fill="white">Testing</text>
+  
+  <!-- Deployment -->
+  <rect x="690" y="80" width="95" height="70" rx="6" fill="#e11d48" stroke="#be123c" stroke-width="2"/>
+  <text x="737" y="115" font-family="Arial, sans-serif" font-size="11" font-weight="bold" text-anchor="middle" fill="white">Deployment</text>
+  
+  <!-- Maintenance -->
+  <rect x="800" y="80" width="85" height="70" rx="6" fill="#f43f5e" stroke="#e11d48" stroke-width="2"/>
+  <text x="842" y="115" font-family="Arial, sans-serif" font-size="10" font-weight="bold" text-anchor="middle" fill="white">Maintenance</text>
+  
+  <!-- Arrows between phases -->
+  <line x1="125" y1="115" x2="135" y2="115" stroke="#64748b" stroke-width="2" marker-end="url(#sdlcArrow)"/>
+  <line x1="235" y1="115" x2="245" y2="115" stroke="#64748b" stroke-width="2" marker-end="url(#sdlcArrow)"/>
+  <line x1="345" y1="115" x2="355" y2="115" stroke="#64748b" stroke-width="2" marker-end="url(#sdlcArrow)"/>
+  <line x1="455" y1="115" x2="465" y2="115" stroke="#64748b" stroke-width="2" marker-end="url(#sdlcArrow)"/>
+  <line x1="565" y1="115" x2="575" y2="115" stroke="#64748b" stroke-width="2" marker-end="url(#sdlcArrow)"/>
+  <line x1="675" y1="115" x2="685" y2="115" stroke="#64748b" stroke-width="2" marker-end="url(#sdlcArrow)"/>
+  <line x1="785" y1="115" x2="795" y2="115" stroke="#64748b" stroke-width="2" marker-end="url(#sdlcArrow)"/>
+  
+  <!-- BA Focus indicator -->
+  <rect x="30" y="165" width="315" height="40" rx="6" fill="#dbeafe" stroke="#3b82f6" stroke-width="2" stroke-dasharray="5,3"/>
+  <text x="187" y="190" font-family="Arial, sans-serif" font-size="11" font-weight="bold" text-anchor="middle" fill="#1e40af">Primary BA Focus Area</text>
+  
+  <!-- Phase descriptions -->
+  <rect x="30" y="220" width="840" height="115" rx="8" fill="#f1f5f9" stroke="#cbd5e1" stroke-width="1"/>
+  
+  <text x="77" y="245" font-family="Arial, sans-serif" font-size="9" font-weight="bold" text-anchor="middle" fill="#475569">Conception</text>
+  <text x="77" y="260" font-family="Arial, sans-serif" font-size="8" text-anchor="middle" fill="#64748b">Evaluate idea</text>
+  <text x="77" y="272" font-family="Arial, sans-serif" font-size="8" text-anchor="middle" fill="#64748b">Problem stmt</text>
+  <text x="77" y="284" font-family="Arial, sans-serif" font-size="8" text-anchor="middle" fill="#64748b">Business case</text>
+  
+  <text x="187" y="245" font-family="Arial, sans-serif" font-size="9" font-weight="bold" text-anchor="middle" fill="#475569">Initiation</text>
+  <text x="187" y="260" font-family="Arial, sans-serif" font-size="8" text-anchor="middle" fill="#64748b">Plan BA work</text>
+  <text x="187" y="272" font-family="Arial, sans-serif" font-size="8" text-anchor="middle" fill="#64748b">Stakeholders</text>
+  <text x="187" y="284" font-family="Arial, sans-serif" font-size="8" text-anchor="middle" fill="#64748b">Governance</text>
+  
+  <text x="297" y="245" font-family="Arial, sans-serif" font-size="9" font-weight="bold" text-anchor="middle" fill="#475569">Analysis</text>
+  <text x="297" y="260" font-family="Arial, sans-serif" font-size="8" text-anchor="middle" fill="#64748b">Elicit reqs</text>
+  <text x="297" y="272" font-family="Arial, sans-serif" font-size="8" text-anchor="middle" fill="#64748b">Document</text>
+  <text x="297" y="284" font-family="Arial, sans-serif" font-size="8" text-anchor="middle" fill="#64748b">Model</text>
+  
+  <text x="407" y="245" font-family="Arial, sans-serif" font-size="9" font-weight="bold" text-anchor="middle" fill="#475569">Design</text>
+  <text x="407" y="260" font-family="Arial, sans-serif" font-size="8" text-anchor="middle" fill="#64748b">Solution spec</text>
+  <text x="407" y="272" font-family="Arial, sans-serif" font-size="8" text-anchor="middle" fill="#64748b">Architecture</text>
+  <text x="407" y="284" font-family="Arial, sans-serif" font-size="8" text-anchor="middle" fill="#64748b">Prototypes</text>
+  
+  <text x="517" y="245" font-family="Arial, sans-serif" font-size="9" font-weight="bold" text-anchor="middle" fill="#475569">Development</text>
+  <text x="517" y="260" font-family="Arial, sans-serif" font-size="8" text-anchor="middle" fill="#64748b">Build solution</text>
+  <text x="517" y="272" font-family="Arial, sans-serif" font-size="8" text-anchor="middle" fill="#64748b">Coding</text>
+  <text x="517" y="284" font-family="Arial, sans-serif" font-size="8" text-anchor="middle" fill="#64748b">Configuration</text>
+  
+  <text x="627" y="245" font-family="Arial, sans-serif" font-size="9" font-weight="bold" text-anchor="middle" fill="#475569">Testing</text>
+  <text x="627" y="260" font-family="Arial, sans-serif" font-size="8" text-anchor="middle" fill="#64748b">Verify reqs</text>
+  <text x="627" y="272" font-family="Arial, sans-serif" font-size="8" text-anchor="middle" fill="#64748b">UAT</text>
+  <text x="627" y="284" font-family="Arial, sans-serif" font-size="8" text-anchor="middle" fill="#64748b">QA</text>
+  
+  <text x="737" y="245" font-family="Arial, sans-serif" font-size="9" font-weight="bold" text-anchor="middle" fill="#475569">Deployment</text>
+  <text x="737" y="260" font-family="Arial, sans-serif" font-size="8" text-anchor="middle" fill="#64748b">Release</text>
+  <text x="737" y="272" font-family="Arial, sans-serif" font-size="8" text-anchor="middle" fill="#64748b">Training</text>
+  <text x="737" y="284" font-family="Arial, sans-serif" font-size="8" text-anchor="middle" fill="#64748b">Go-live</text>
+  
+  <text x="842" y="245" font-family="Arial, sans-serif" font-size="9" font-weight="bold" text-anchor="middle" fill="#475569">Maintenance</text>
+  <text x="842" y="260" font-family="Arial, sans-serif" font-size="8" text-anchor="middle" fill="#64748b">Support</text>
+  <text x="842" y="272" font-family="Arial, sans-serif" font-size="8" text-anchor="middle" fill="#64748b">Enhancements</text>
+  <text x="842" y="284" font-family="Arial, sans-serif" font-size="8" text-anchor="middle" fill="#64748b">Fixes</text>
+</svg>

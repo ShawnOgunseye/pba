@@ -1,0 +1,928 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.8.25">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>5&nbsp; Requirement Elicitation and Collaboration – Practical Business Analysis</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<link href="../chapters/06-lifecycle.html" rel="next">
+<link href="../chapters/04-planning.html" rel="prev">
+<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-7b89279ff1a6dce999919e0e67d4d9ec.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-70a47bd5681a7291082a5b9f83d58762.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+
+</head>
+
+<body class="nav-sidebar floating quarto-light">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../chapters/03-strategy.html">Part II: Core Knowledge Areas</a></li><li class="breadcrumb-item"><a href="../chapters/05-elicitation.html"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Requirement Elicitation and Collaboration</span></a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header sidebar-header-stacked">
+      <a href="../index.html" class="sidebar-logo-link">
+      </a>
+    <div class="sidebar-title mb-0 py-0">
+      <a href="../">Practical Business Analysis</a> 
+    </div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Preface</span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
+ <span class="menu-text">Part I: Foundations</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/01-welcome.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Welcome to Business Analysis</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/02-fundamentals.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Business Analysis Fundamentals</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true">
+ <span class="menu-text">Part II: Core Knowledge Areas</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/03-strategy.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Strategy: What Problem to Solve</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/04-planning.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Business Analysis Planning and Monitoring</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/05-elicitation.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Requirement Elicitation and Collaboration</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/06-lifecycle.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Requirement Lifecycle Management</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/07-analysis-design.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Requirements Analysis and Design Definition</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true">
+ <span class="menu-text">Part III: Agile Practice</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/08-agile-scrum.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Agile and Scrum</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true">
+ <span class="menu-text">Part IV: Applied Practice</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/09-modeling-exercises.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Modeling Exercises</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/10-ba-ai.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Business Analysis in the Age of AI</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/11-ba-disciplines.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Business Analysis Across Disciplines</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/12-ba-data-analytics.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Business Analysis in Data Analytics</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/13-capstone.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Innovate360 Capstone Project</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../references.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">References</span></a>
+  </div>
+</li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#what-is-a-requirement" id="toc-what-is-a-requirement" class="nav-link active" data-scroll-target="#what-is-a-requirement"><span class="header-section-number">5.1</span> What Is a Requirement?</a></li>
+  <li><a href="#types-of-requirements" id="toc-types-of-requirements" class="nav-link" data-scroll-target="#types-of-requirements"><span class="header-section-number">5.2</span> Types of Requirements</a></li>
+  <li><a href="#attributes-of-good-requirements" id="toc-attributes-of-good-requirements" class="nav-link" data-scroll-target="#attributes-of-good-requirements"><span class="header-section-number">5.3</span> Attributes of Good Requirements</a></li>
+  <li><a href="#the-elicitation-process" id="toc-the-elicitation-process" class="nav-link" data-scroll-target="#the-elicitation-process"><span class="header-section-number">5.4</span> The Elicitation Process</a></li>
+  <li><a href="#preparing-for-elicitation" id="toc-preparing-for-elicitation" class="nav-link" data-scroll-target="#preparing-for-elicitation"><span class="header-section-number">5.5</span> Preparing for Elicitation</a></li>
+  <li><a href="#conducting-elicitation" id="toc-conducting-elicitation" class="nav-link" data-scroll-target="#conducting-elicitation"><span class="header-section-number">5.6</span> Conducting Elicitation</a></li>
+  <li><a href="#elicitation-techniques" id="toc-elicitation-techniques" class="nav-link" data-scroll-target="#elicitation-techniques"><span class="header-section-number">5.7</span> Elicitation Techniques</a>
+  <ul class="collapse">
+  <li><a href="#interviews" id="toc-interviews" class="nav-link" data-scroll-target="#interviews"><span class="header-section-number">5.7.1</span> Interviews</a></li>
+  <li><a href="#observation" id="toc-observation" class="nav-link" data-scroll-target="#observation"><span class="header-section-number">5.7.2</span> Observation</a></li>
+  <li><a href="#brainstorming" id="toc-brainstorming" class="nav-link" data-scroll-target="#brainstorming"><span class="header-section-number">5.7.3</span> Brainstorming</a></li>
+  <li><a href="#prototyping" id="toc-prototyping" class="nav-link" data-scroll-target="#prototyping"><span class="header-section-number">5.7.4</span> Prototyping</a></li>
+  <li><a href="#workshops" id="toc-workshops" class="nav-link" data-scroll-target="#workshops"><span class="header-section-number">5.7.5</span> Workshops</a></li>
+  </ul></li>
+  <li><a href="#the-gain-framework" id="toc-the-gain-framework" class="nav-link" data-scroll-target="#the-gain-framework"><span class="header-section-number">5.8</span> The GAIN Framework</a></li>
+  <li><a href="#confirming-elicitation-results" id="toc-confirming-elicitation-results" class="nav-link" data-scroll-target="#confirming-elicitation-results"><span class="header-section-number">5.9</span> Confirming Elicitation Results</a></li>
+  <li><a href="#managing-stakeholder-collaboration" id="toc-managing-stakeholder-collaboration" class="nav-link" data-scroll-target="#managing-stakeholder-collaboration"><span class="header-section-number">5.10</span> Managing Stakeholder Collaboration</a></li>
+  <li><a href="#case-example-the-hospital-scheduling-system" id="toc-case-example-the-hospital-scheduling-system" class="nav-link" data-scroll-target="#case-example-the-hospital-scheduling-system"><span class="header-section-number">5.11</span> Case Example: The Hospital Scheduling System</a></li>
+  <li><a href="#review-questions" id="toc-review-questions" class="nav-link" data-scroll-target="#review-questions"><span class="header-section-number">5.12</span> Review Questions</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../chapters/03-strategy.html">Part II: Core Knowledge Areas</a></li><li class="breadcrumb-item"><a href="../chapters/05-elicitation.html"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Requirement Elicitation and Collaboration</span></a></li></ol></nav>
+<div class="quarto-title">
+<h1 class="title"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Requirement Elicitation and Collaboration</span></h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<p>If there is one skill that defines Business Analysis more than any other, it is the ability to understand what people truly need. This chapter addresses that skill directly. Requirement elicitation is not just gathering information. It is uncovering needs that stakeholders may not even know they have, clarifying desires that are initially vague, and building shared understanding among people with different perspectives.</p>
+<p>The work we discuss here is both art and science. There are techniques you can learn and practice. But there is also judgment that develops only through experience. My goal is to give you the techniques while helping you understand the judgment that makes them effective.</p>
+<section id="what-is-a-requirement" class="level2" data-number="5.1">
+<h2 data-number="5.1" class="anchored" data-anchor-id="what-is-a-requirement"><span class="header-section-number">5.1</span> What Is a Requirement?</h2>
+<p>Before we discuss how to gather requirements, we must define what we mean by the term. A requirement is a condition or capability needed by a stakeholder to solve a problem or achieve an objective.</p>
+<p>Read that definition carefully. Requirements are not features. They are not specifications. They are not the things that developers build. Requirements are needs. They describe what stakeholders require to accomplish their goals.</p>
+<p>This distinction matters because it keeps us focused on the right question. We do not ask “what should the system do?” We ask “what do stakeholders need to accomplish?” The system exists to serve stakeholders, not the other way around.</p>
+<p>Requirements communicate and clarify business needs or required capabilities. They bridge the gap between problems that need solving and solutions that address those problems.</p>
+</section>
+<section id="types-of-requirements" class="level2" data-number="5.2">
+<h2 data-number="5.2" class="anchored" data-anchor-id="types-of-requirements"><span class="header-section-number">5.2</span> Types of Requirements</h2>
+<p>Not all requirements are the same. The course material identifies four distinct types, each serving a different purpose.</p>
+<div id="fig-req-types" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Requirements classification hierarchy showing business, stakeholder, solution, and transition requirements">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-req-types-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="../images/ch05_requirements_classification.svg" class="img-fluid figure-img" alt="Requirements classification hierarchy showing business, stakeholder, solution, and transition requirements">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-req-types-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;5.1: Requirements exist at different levels, from high-level business goals to detailed solution specifications.
+</figcaption>
+</figure>
+</div>
+<p><strong>Business requirements</strong> sit at the highest level (<a href="#fig-req-types" class="quarto-xref">Figure&nbsp;<span>5.1</span></a>). They are statements of goals, objectives, and outcomes that describe why a change has been initiated. Business requirements can apply to an entire enterprise, a specific business area, or a particular initiative. They are developed during strategy analysis and answer the fundamental question: why are we doing this?</p>
+<p>Here is an example of a business requirement: “We need an online presence to help us service customers worldwide.” Notice that this statement does not specify any particular technology or approach. It describes a business need that could be addressed in many different ways.</p>
+<p><strong>Stakeholder requirements</strong> describe the needs of specific stakeholder groups that must be met to achieve business requirements. They serve as a bridge between high-level business requirements and detailed solution requirements.</p>
+<p>For example: “We need to showcase our departments’ offerings online.” This requirement is more specific than the business requirement but still leaves room for different implementation approaches.</p>
+<p><strong>Solution requirements</strong> describe the capabilities and qualities that a solution must have to meet stakeholder requirements. This category divides into two subcategories.</p>
+<p>Functional requirements describe what the solution must do in terms of behavior and information management. “The website must allow customers to search for products by category” is a functional requirement.</p>
+<p>Non-functional requirements describe conditions under which the solution must remain effective or qualities it must have. “The website must load within three seconds on standard broadband connections” is a non-functional requirement. Non-functional requirements often address performance, security, usability, reliability, and similar concerns.</p>
+<p><strong>Transition requirements</strong> describe capabilities needed to move from the current state to the future state that are not needed once the transition is complete. Examples include data conversion utilities, training programs, and temporary processes that support parallel operations during cutover.</p>
+</section>
+<section id="attributes-of-good-requirements" class="level2" data-number="5.3">
+<h2 data-number="5.3" class="anchored" data-anchor-id="attributes-of-good-requirements"><span class="header-section-number">5.3</span> Attributes of Good Requirements</h2>
+<p>Writing requirements well is harder than it appears. Good requirements share certain attributes that make them useful for development and verification.</p>
+<p>Good requirements are <strong>unambiguous</strong>. They can be interpreted only one way. If different readers could reasonably reach different conclusions about what a requirement means, it needs revision.</p>
+<p>Good requirements are <strong>testable</strong>. You can verify whether they are met. “The system must be user-friendly” is not testable. “New users must be able to complete a basic transaction within five minutes without assistance” is testable.</p>
+<p>Good requirements are <strong>clear</strong>, which means concise, terse, and precise. They contain no unnecessary words and convey meaning efficiently.</p>
+<p>Good requirements are <strong>correct</strong>. They accurately reflect what stakeholders actually need.</p>
+<p>Good requirements are <strong>understandable</strong>. The audience can comprehend them without extensive explanation.</p>
+<p>Good requirements are <strong>feasible</strong>. They can realistically be implemented given available technology, time, and resources.</p>
+<p>Good requirements are <strong>independent</strong>. They can stand alone without requiring understanding of other requirements to make sense.</p>
+<p>Good requirements are <strong>atomic</strong>. Each requirement contains only one thing. Combining multiple needs into a single requirement creates problems during design, development, and testing.</p>
+<p>Good requirements are <strong>necessary</strong>. They reflect actual needs rather than preferences or assumptions about what might be useful.</p>
+<p>Good requirements are <strong>implementation-free</strong>. They describe what is needed, not how to achieve it. “The system must store customer addresses” is implementation-free. “The system must store customer addresses in an Oracle database” is not.</p>
+</section>
+<section id="the-elicitation-process" class="level2" data-number="5.4">
+<h2 data-number="5.4" class="anchored" data-anchor-id="the-elicitation-process"><span class="header-section-number">5.4</span> The Elicitation Process</h2>
+<p>Elicitation is not a single activity but a series of tasks that work together.</p>
+<p>Preparation ensures that everyone is ready for productive elicitation activities. Conducting elicitation involves actually gathering information. Documenting results captures what was learned. Confirming results validates that the documented information is accurate.</p>
+</section>
+<section id="preparing-for-elicitation" class="level2" data-number="5.5">
+<h2 data-number="5.5" class="anchored" data-anchor-id="preparing-for-elicitation"><span class="header-section-number">5.5</span> Preparing for Elicitation</h2>
+<p>Preparation involves ensuring that stakeholders have the information they need to contribute effectively and understand what they will be asked to do.</p>
+<p>Resource preparation identifies the people, facilities, and equipment needed. Who needs to participate? Where will activities take place? What materials or technology are required?</p>
+<p>Ground rules establish expectations for elicitation activities like brainstorming sessions, focus groups, interviews, observations, prototyping exercises, and requirements workshops. What behaviors are expected? What behaviors are prohibited?</p>
+<p>Informing stakeholders means notifying appropriate parties of the plan. Let people know what to expect, why their participation matters, and how to prepare.</p>
+<p>Process agreements establish how feedback will flow during elicitation and how results will be verified and approved.</p>
+</section>
+<section id="conducting-elicitation" class="level2" data-number="5.6">
+<h2 data-number="5.6" class="anchored" data-anchor-id="conducting-elicitation"><span class="header-section-number">5.6</span> Conducting Elicitation</h2>
+<p>Conducting elicitation is where you actually gather information about stakeholder needs. This work requires careful attention to several factors.</p>
+<p>Tracking guards against scope creep by tracing requirements back to business goals and objectives. When a potential requirement emerges, ask whether it supports the defined business need. If not, it may belong in a different initiative.</p>
+<p>Attributes documentation captures metadata about requirements as they are elicited. Recording the source, value, and priority of each requirement aids management throughout the lifecycle.</p>
+<p>Metrics tracking records participation and time spent, providing a basis for future planning.</p>
+</section>
+<section id="elicitation-techniques" class="level2" data-number="5.7">
+<h2 data-number="5.7" class="anchored" data-anchor-id="elicitation-techniques"><span class="header-section-number">5.7</span> Elicitation Techniques</h2>
+<div id="fig-elicit-tech" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Elicitation techniques including Interviews, Workshops, Observation, Brainstorming, Prototyping">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-elicit-tech-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="../images/ch05_elicitation_techniques.svg" class="img-fluid figure-img" alt="Elicitation techniques including Interviews, Workshops, Observation, Brainstorming, Prototyping">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-elicit-tech-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;5.2: Business Analysts use many techniques to elicit requirements, each suited to different situations.
+</figcaption>
+</figure>
+</div>
+<p>Business Analysts use many techniques to elicit requirements (<a href="#fig-elicit-tech" class="quarto-xref">Figure&nbsp;<span>5.2</span></a>). Each has strengths and weaknesses that make it more or less suitable for different situations.</p>
+<section id="interviews" class="level3" data-number="5.7.1">
+<h3 data-number="5.7.1" class="anchored" data-anchor-id="interviews"><span class="header-section-number">5.7.1</span> Interviews</h3>
+<p>Interviewing is the process of interacting with individual stakeholders to understand their needs and perspectives. Interviews work well for gathering detailed information from specific individuals.</p>
+<p>Interviews can be structured, with a predefined set of questions, agenda, and execution pattern. Structured interviews ensure consistency and coverage but may miss unexpected insights.</p>
+<p>Interviews can be unstructured, with free-flowing conversation that follows whatever topics emerge. Unstructured interviews capture unexpected information but may miss important topics.</p>
+<p>Questions within interviews can be closed-ended, providing options for responses and yielding objective data. They can be open-ended, allowing subjective responses that reveal deeper perspectives. They can be probing, following up on initial answers to explore issues more deeply.</p>
+<p>Interviews are not ideal for building consensus. When you need agreement among multiple stakeholders, other techniques work better.</p>
+</section>
+<section id="observation" class="level3" data-number="5.7.2">
+<h3 data-number="5.7.2" class="anchored" data-anchor-id="observation"><span class="header-section-number">5.7.2</span> Observation</h3>
+<p>Observation involves studying stakeholders as they perform their work to document details about current processes. Watching people work often reveals information that interviews miss, because people do not always accurately describe what they actually do.</p>
+<p>Passive or invisible observation means watching without interrupting. Stakeholders perform their work normally while the observer records what happens.</p>
+<p>Active or visible observation involves interaction. The observer asks questions and requests explanations while watching work occur.</p>
+<p>Shadowing means following someone throughout their day, learning by comprehensive observation.</p>
+<p>Apprenticing means actually participating in the work alongside stakeholders, learning by doing.</p>
+<p>Observation works best for processes that occur regularly and predictably. It is less suitable for exception handling or fraud detection, where normal observation would not capture the relevant scenarios.</p>
+</section>
+<section id="brainstorming" class="level3" data-number="5.7.3">
+<h3 data-number="5.7.3" class="anchored" data-anchor-id="brainstorming"><span class="header-section-number">5.7.3</span> Brainstorming</h3>
+<p>Brainstorming uses the creative power of a group to generate many ideas quickly. It works well when you need diverse options or want to explore possibilities without immediately evaluating them.</p>
+<p>The cardinal rule of brainstorming is: do not debate ideas during the session. Evaluation kills creativity. When people fear criticism, they censor themselves. Brainstorming separates idea generation from idea evaluation.</p>
+<p>Anonymous brainstorming, where contributors are not identified, can increase participation by reducing social pressure.</p>
+</section>
+<section id="prototyping" class="level3" data-number="5.7.4">
+<h3 data-number="5.7.4" class="anchored" data-anchor-id="prototyping"><span class="header-section-number">5.7.4</span> Prototyping</h3>
+<p>Prototyping creates visual representations of potential solutions to elicit feedback.</p>
+<p>Wireframes are low-fidelity representations showing basic layout and placement without detailed design. They help stakeholders understand structure and flow.</p>
+<p>Mockups are medium-fidelity representations with more defined visual elements.</p>
+<p>Prototypes are high-fidelity representations that look and feel close to the final product. They may include interactive elements that simulate actual functionality.</p>
+</section>
+<section id="workshops" class="level3" data-number="5.7.5">
+<h3 data-number="5.7.5" class="anchored" data-anchor-id="workshops"><span class="header-section-number">5.7.5</span> Workshops</h3>
+<p>Workshops are focused events attended by key stakeholders and subject matter experts for a concentrated period of time. They may be held for different purposes including planning, analysis, design, scoping, requirements elicitation, modeling, or any combination of these.</p>
+<p>Workshops bring stakeholders together to collaborate on achieving a predefined goal. They are particularly effective for building consensus and clarifying issues that affect multiple parties.</p>
+<p>Benefits of workshops include rapid, high-quality decision making, greater buy-in from all stakeholders, building team spirit, building consensus, and clarification of issues.</p>
+</section>
+</section>
+<section id="the-gain-framework" class="level2" data-number="5.8">
+<h2 data-number="5.8" class="anchored" data-anchor-id="the-gain-framework"><span class="header-section-number">5.8</span> The GAIN Framework</h2>
+<p>When conducting elicitation conversations, I recommend a structure that helps ensure you gather complete information. GAIN stands for Goal, Achievement Value, Issues, and Needs.</p>
+<p><strong>G for Goal</strong>: Ask about the stakeholder’s ideas. What are they trying to accomplish? What does success look like to them?</p>
+<p><strong>A for Achievement Value</strong>: Try to understand the importance of what was mentioned. Why does this goal matter? What happens if it is not achieved?</p>
+<p><strong>I for Issues</strong>: Ask about obstacles. What problems might prevent achieving the listed goals? What has gone wrong in the past?</p>
+<p><strong>N for Needs</strong>: Determine who else to consult and what resources are required. Is there anyone else you should talk to? What information would help move forward?</p>
+</section>
+<section id="confirming-elicitation-results" class="level2" data-number="5.9">
+<h2 data-number="5.9" class="anchored" data-anchor-id="confirming-elicitation-results"><span class="header-section-number">5.9</span> Confirming Elicitation Results</h2>
+<p>After gathering information, you must confirm that what you documented accurately reflects what stakeholders actually said and meant. Misunderstandings caught early are easy to correct. Misunderstandings caught during testing are expensive disasters.</p>
+<p>Document analysis compares elicitation results against source information or other existing documents.</p>
+<p>Interviews with stakeholders verify that the documented information is correct.</p>
+<p>Reviews allow groups to examine elicitation results and provide feedback.</p>
+<p>Workshops walk through elicitation results using predetermined agendas, scripts, or scenario tests.</p>
+</section>
+<section id="managing-stakeholder-collaboration" class="level2" data-number="5.10">
+<h2 data-number="5.10" class="anchored" data-anchor-id="managing-stakeholder-collaboration"><span class="header-section-number">5.10</span> Managing Stakeholder Collaboration</h2>
+<p>Collaboration does not happen automatically. It requires ongoing management to keep stakeholders engaged and working toward common goals.</p>
+<p>Gaining agreement on commitments ensures that everyone understands and accepts their responsibilities.</p>
+<p>Monitoring stakeholder engagement tracks whether people are participating as expected and addresses issues when they are not.</p>
+<p>Continuous collaboration maintains relationships and communication throughout the initiative.</p>
+</section>
+<section id="case-example-the-hospital-scheduling-system" class="level2" data-number="5.11">
+<h2 data-number="5.11" class="anchored" data-anchor-id="case-example-the-hospital-scheduling-system"><span class="header-section-number">5.11</span> Case Example: The Hospital Scheduling System</h2>
+<p>Regional Medical Center needed a new scheduling system. The existing system was twenty years old, and everyone complained about it. Schedulers spent hours on manual workarounds. Physicians grumbled about appointment conflicts. Patients waited too long.</p>
+<p>The Business Analyst assigned to the project recognized that thorough elicitation would be critical. She planned a comprehensive approach using multiple techniques.</p>
+<p>She started with interviews across different departments. Schedulers described the complex constraints they juggled: physician preferences, room availability, equipment needs, staff certification requirements. Nurses explained that they needed visibility into schedules across multiple units. Physicians revealed that their scheduling preferences had been ignored for years. Administrators wanted reports that the current system could not produce.</p>
+<p>But interviews were not enough. The Business Analyst also conducted observation, watching schedulers do their work. She discovered something surprising: the schedulers had developed informal practices that violated official procedures but actually made the system work. They had workarounds that management did not know about. A new system that enforced official procedures would fail because those procedures were inadequate.</p>
+<p>Focus groups with patients revealed another dimension. Patients did not care about internal scheduling complexity. They cared about being able to get appointments when they needed them, getting reminders so they did not forget, and not waiting in the waiting room. Scheduling was the number one source of patient dissatisfaction.</p>
+<p>Prototyping helped evaluate vendor options. The Business Analyst created wireframes showing key workflows, then had stakeholders compare how different vendor products would support those workflows. This revealed gaps that generic vendor demonstrations would have hidden.</p>
+<p>Finally, workshops brought stakeholders together to prioritize requirements and build consensus. When scheduling priorities conflicted between departments, workshops provided a forum to work through the conflicts rather than letting them fester.</p>
+<p>The project took longer than the organization initially expected. But it worked. The new system addressed real needs because those needs had been thoroughly elicited and validated. Adoption was smooth because stakeholders had been involved throughout and felt ownership of the solution.</p>
+<p>Now that you understand how to elicit requirements from stakeholders, let us explore how to manage those requirements throughout their lifecycle.</p>
+</section>
+<section id="review-questions" class="level2" data-number="5.12">
+<h2 data-number="5.12" class="anchored" data-anchor-id="review-questions"><span class="header-section-number">5.12</span> Review Questions</h2>
+<ol type="1">
+<li><p>Which type of requirement describes capabilities needed only during the transition from current state to future state?</p>
+<ol type="a">
+<li>Business requirements</li>
+<li>Stakeholder requirements</li>
+<li>Solution requirements</li>
+<li>Transition requirements</li>
+</ol></li>
+<li><p>A requirement stating “The system must be easy to use” violates which attribute of good requirements?</p>
+<ol type="a">
+<li>Independent</li>
+<li>Testable</li>
+<li>Atomic</li>
+<li>Necessary</li>
+</ol></li>
+<li><p>What is the cardinal rule of brainstorming?</p>
+<ol type="a">
+<li>Limit sessions to one hour</li>
+<li>Ensure equal speaking time for all participants</li>
+<li>Do not debate ideas during the session</li>
+<li>Always have a senior manager present</li>
+</ol></li>
+<li><p>In the GAIN framework, what does “A” represent?</p>
+<ol type="a">
+<li>Action items to complete</li>
+<li>Achievement Value or importance</li>
+<li>Assumptions to validate</li>
+<li>Alternatives to consider</li>
+</ol></li>
+<li><p>What is the key difference between functional and non-functional requirements?</p>
+<ol type="a">
+<li>Functional requirements are more important</li>
+<li>Functional requirements describe behavior; non-functional requirements describe qualities</li>
+<li>Non-functional requirements are optional</li>
+<li>Functional requirements come from users; non-functional requirements come from IT</li>
+</ol></li>
+</ol>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Answer Key
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-1" class="callout-1-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>1-d, 2-b, 3-c, 4-b, 5-b</p>
+</div>
+</div>
+</div>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="../chapters/04-planning.html" class="pagination-link" aria-label="Business Analysis Planning and Monitoring">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Business Analysis Planning and Monitoring</span></span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="../chapters/06-lifecycle.html" class="pagination-link" aria-label="Requirement Lifecycle Management">
+        <span class="nav-page-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Requirement Lifecycle Management</span></span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+
+
+
+
+</body></html>

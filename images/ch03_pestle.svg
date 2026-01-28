@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450">
+  <!-- Background -->
+  <rect width="800" height="450" fill="#f8fafc"/>
+  
+  <!-- Title -->
+  <text x="400" y="30" font-family="Arial, sans-serif" font-size="20" font-weight="bold" text-anchor="middle" fill="#1e293b">PESTLE Analysis</text>
+  <text x="400" y="50" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#64748b">(External Macro-Environmental Factors)</text>
+  
+  <!-- Central circle -->
+  <circle cx="400" cy="240" r="60" fill="#f1f5f9" stroke="#94a3b8" stroke-width="2"/>
+  <text x="400" y="235" font-family="Arial, sans-serif" font-size="11" font-weight="bold" text-anchor="middle" fill="#475569">YOUR</text>
+  <text x="400" y="252" font-family="Arial, sans-serif" font-size="11" font-weight="bold" text-anchor="middle" fill="#475569">ORGANIZATION</text>
+  
+  <!-- Political (top left) -->
+  <rect x="80" y="80" width="160" height="100" rx="10" fill="#fee2e2" stroke="#ef4444" stroke-width="2"/>
+  <text x="160" y="105" font-family="Arial, sans-serif" font-size="14" font-weight="bold" text-anchor="middle" fill="#b91c1c">P - Political</text>
+  <text x="95" y="128" font-family="Arial, sans-serif" font-size="9" fill="#dc2626">• Government policies</text>
+  <text x="95" y="143" font-family="Arial, sans-serif" font-size="9" fill="#dc2626">• Political stability</text>
+  <text x="95" y="158" font-family="Arial, sans-serif" font-size="9" fill="#dc2626">• Trade regulations</text>
+  <text x="95" y="173" font-family="Arial, sans-serif" font-size="9" fill="#dc2626">• Tax policies</text>
+  <line x1="240" y1="140" x2="340" y2="200" stroke="#ef4444" stroke-width="2" stroke-dasharray="4,2"/>
+  
+  <!-- Economic (top center) -->
+  <rect x="320" y="70" width="160" height="100" rx="10" fill="#dcfce7" stroke="#22c55e" stroke-width="2"/>
+  <text x="400" y="95" font-family="Arial, sans-serif" font-size="14" font-weight="bold" text-anchor="middle" fill="#166534">E - Economic</text>
+  <text x="335" y="118" font-family="Arial, sans-serif" font-size="9" fill="#15803d">• Economic growth</text>
+  <text x="335" y="133" font-family="Arial, sans-serif" font-size="9" fill="#15803d">• Interest rates</text>
+  <text x="335" y="148" font-family="Arial, sans-serif" font-size="9" fill="#15803d">• Inflation</text>
+  <text x="335" y="163" font-family="Arial, sans-serif" font-size="9" fill="#15803d">• Exchange rates</text>
+  <line x1="400" y1="170" x2="400" y2="180" stroke="#22c55e" stroke-width="2" stroke-dasharray="4,2"/>
+  
+  <!-- Social (top right) -->
+  <rect x="560" y="80" width="160" height="100" rx="10" fill="#dbeafe" stroke="#3b82f6" stroke-width="2"/>
+  <text x="640" y="105" font-family="Arial, sans-serif" font-size="14" font-weight="bold" text-anchor="middle" fill="#1e40af">S - Social</text>
+  <text x="575" y="128" font-family="Arial, sans-serif" font-size="9" fill="#2563eb">• Demographics</text>
+  <text x="575" y="143" font-family="Arial, sans-serif" font-size="9" fill="#2563eb">• Cultural trends</text>
+  <text x="575" y="158" font-family="Arial, sans-serif" font-size="9" fill="#2563eb">• Lifestyle changes</text>
+  <text x="575" y="173" font-family="Arial, sans-serif" font-size="9" fill="#2563eb">• Consumer attitudes</text>
+  <line x1="560" y1="140" x2="460" y2="200" stroke="#3b82f6" stroke-width="2" stroke-dasharray="4,2"/>
+  
+  <!-- Technological (bottom left) -->
+  <rect x="80" y="280" width="160" height="100" rx="10" fill="#fef3c7" stroke="#f59e0b" stroke-width="2"/>
+  <text x="160" y="305" font-family="Arial, sans-serif" font-size="14" font-weight="bold" text-anchor="middle" fill="#b45309">T - Technological</text>
+  <text x="95" y="328" font-family="Arial, sans-serif" font-size="9" fill="#d97706">• Innovation rate</text>
+  <text x="95" y="343" font-family="Arial, sans-serif" font-size="9" fill="#d97706">• Automation</text>
+  <text x="95" y="358" font-family="Arial, sans-serif" font-size="9" fill="#d97706">• R&amp;D activity</text>
+  <text x="95" y="373" font-family="Arial, sans-serif" font-size="9" fill="#d97706">• Tech infrastructure</text>
+  <line x1="240" y1="310" x2="340" y2="270" stroke="#f59e0b" stroke-width="2" stroke-dasharray="4,2"/>
+  
+  <!-- Legal (bottom center) -->
+  <rect x="320" y="300" width="160" height="100" rx="10" fill="#f3e8ff" stroke="#a855f7" stroke-width="2"/>
+  <text x="400" y="325" font-family="Arial, sans-serif" font-size="14" font-weight="bold" text-anchor="middle" fill="#7e22ce">L - Legal</text>
+  <text x="335" y="348" font-family="Arial, sans-serif" font-size="9" fill="#9333ea">• Employment law</text>
+  <text x="335" y="363" font-family="Arial, sans-serif" font-size="9" fill="#9333ea">• Health &amp; safety</text>
+  <text x="335" y="378" font-family="Arial, sans-serif" font-size="9" fill="#9333ea">• Data protection</text>
+  <text x="335" y="393" font-family="Arial, sans-serif" font-size="9" fill="#9333ea">• Industry regulations</text>
+  <line x1="400" y1="300" x2="400" y2="300" stroke="#a855f7" stroke-width="2" stroke-dasharray="4,2"/>
+  
+  <!-- Environmental (bottom right) -->
+  <rect x="560" y="280" width="160" height="100" rx="10" fill="#e0f2fe" stroke="#0ea5e9" stroke-width="2"/>
+  <text x="640" y="305" font-family="Arial, sans-serif" font-size="14" font-weight="bold" text-anchor="middle" fill="#0369a1">E - Environmental</text>
+  <text x="575" y="328" font-family="Arial, sans-serif" font-size="9" fill="#0284c7">• Climate change</text>
+  <text x="575" y="343" font-family="Arial, sans-serif" font-size="9" fill="#0284c7">• Sustainability</text>
+  <text x="575" y="358" font-family="Arial, sans-serif" font-size="9" fill="#0284c7">• Carbon footprint</text>
+  <text x="575" y="373" font-family="Arial, sans-serif" font-size="9" fill="#0284c7">• Waste management</text>
+  <line x1="560" y1="310" x2="460" y2="270" stroke="#0ea5e9" stroke-width="2" stroke-dasharray="4,2"/>
+  
+  <!-- Footer -->
+  <text x="400" y="425" font-family="Arial, sans-serif" font-size="10" text-anchor="middle" fill="#64748b">Also known as STEEPLE when Ethical factors are added as a seventh category</text>
+</svg>

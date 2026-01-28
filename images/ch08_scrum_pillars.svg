@@ -1,0 +1,82 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400">
+  <!-- Background -->
+  <rect width="800" height="400" fill="#f8fafc"/>
+  
+  <!-- Title -->
+  <text x="400" y="35" font-family="Arial, sans-serif" font-size="20" font-weight="bold" text-anchor="middle" fill="#1e293b">The Three Pillars of Scrum</text>
+  
+  <!-- Base platform -->
+  <rect x="100" y="320" width="600" height="30" rx="5" fill="#1e293b"/>
+  <text x="400" y="340" font-family="Arial, sans-serif" font-size="12" font-weight="bold" text-anchor="middle" fill="white">Empirical Process Control</text>
+  
+  <!-- Pillar 1: Transparency -->
+  <rect x="140" y="120" width="160" height="200" rx="10" fill="#3b82f6" stroke="#1d4ed8" stroke-width="3"/>
+  
+  <!-- Pillar top -->
+  <rect x="130" y="90" width="180" height="40" rx="8" fill="#1d4ed8"/>
+  <text x="220" y="117" font-family="Arial, sans-serif" font-size="14" font-weight="bold" text-anchor="middle" fill="white">TRANSPARENCY</text>
+  
+  <!-- Content -->
+  <text x="220" y="160" font-family="Arial, sans-serif" font-size="11" text-anchor="middle" fill="white">Visibility of the</text>
+  <text x="220" y="178" font-family="Arial, sans-serif" font-size="11" text-anchor="middle" fill="white">significant aspects</text>
+  <text x="220" y="196" font-family="Arial, sans-serif" font-size="11" text-anchor="middle" fill="white">of the process</text>
+  
+  <line x1="160" y1="215" x2="280" y2="215" stroke="#bfdbfe" stroke-width="1"/>
+  
+  <text x="160" y="240" font-family="Arial, sans-serif" font-size="9" fill="#bfdbfe">• Common language</text>
+  <text x="160" y="258" font-family="Arial, sans-serif" font-size="9" fill="#bfdbfe">• Shared understanding</text>
+  <text x="160" y="276" font-family="Arial, sans-serif" font-size="9" fill="#bfdbfe">• Definition of Done</text>
+  <text x="160" y="294" font-family="Arial, sans-serif" font-size="9" fill="#bfdbfe">• Visible artifacts</text>
+  
+  <!-- Pillar 2: Inspection -->
+  <rect x="320" y="120" width="160" height="200" rx="10" fill="#22c55e" stroke="#16a34a" stroke-width="3"/>
+  
+  <!-- Pillar top -->
+  <rect x="310" y="90" width="180" height="40" rx="8" fill="#16a34a"/>
+  <text x="400" y="117" font-family="Arial, sans-serif" font-size="14" font-weight="bold" text-anchor="middle" fill="white">INSPECTION</text>
+  
+  <!-- Content -->
+  <text x="400" y="160" font-family="Arial, sans-serif" font-size="11" text-anchor="middle" fill="white">Timely checks on</text>
+  <text x="400" y="178" font-family="Arial, sans-serif" font-size="11" text-anchor="middle" fill="white">progress toward</text>
+  <text x="400" y="196" font-family="Arial, sans-serif" font-size="11" text-anchor="middle" fill="white">the sprint goal</text>
+  
+  <line x1="340" y1="215" x2="460" y2="215" stroke="#bbf7d0" stroke-width="1"/>
+  
+  <text x="340" y="240" font-family="Arial, sans-serif" font-size="9" fill="#bbf7d0">• Sprint Review</text>
+  <text x="340" y="258" font-family="Arial, sans-serif" font-size="9" fill="#bbf7d0">• Daily Scrum</text>
+  <text x="340" y="276" font-family="Arial, sans-serif" font-size="9" fill="#bbf7d0">• Detect variances</text>
+  <text x="340" y="294" font-family="Arial, sans-serif" font-size="9" fill="#bbf7d0">• Frequent feedback</text>
+  
+  <!-- Pillar 3: Adaptation -->
+  <rect x="500" y="120" width="160" height="200" rx="10" fill="#f59e0b" stroke="#d97706" stroke-width="3"/>
+  
+  <!-- Pillar top -->
+  <rect x="490" y="90" width="180" height="40" rx="8" fill="#d97706"/>
+  <text x="580" y="117" font-family="Arial, sans-serif" font-size="14" font-weight="bold" text-anchor="middle" fill="white">ADAPTATION</text>
+  
+  <!-- Content -->
+  <text x="580" y="160" font-family="Arial, sans-serif" font-size="11" text-anchor="middle" fill="white">Adjusting process</text>
+  <text x="580" y="178" font-family="Arial, sans-serif" font-size="11" text-anchor="middle" fill="white">to minimize any</text>
+  <text x="580" y="196" font-family="Arial, sans-serif" font-size="11" text-anchor="middle" fill="white">further deviation</text>
+  
+  <line x1="520" y1="215" x2="640" y2="215" stroke="#fde68a" stroke-width="1"/>
+  
+  <text x="520" y="240" font-family="Arial, sans-serif" font-size="9" fill="#fef3c7">• Retrospective</text>
+  <text x="520" y="258" font-family="Arial, sans-serif" font-size="9" fill="#fef3c7">• Backlog refinement</text>
+  <text x="520" y="276" font-family="Arial, sans-serif" font-size="9" fill="#fef3c7">• Process adjustment</text>
+  <text x="520" y="294" font-family="Arial, sans-serif" font-size="9" fill="#fef3c7">• Continuous improve</text>
+  
+  <!-- Arrows showing cycle -->
+  <path d="M 300 75 Q 400 50 500 75" stroke="#64748b" stroke-width="2" fill="none" marker-end="url(#pillarArrow)"/>
+  <path d="M 500 75 Q 600 50 680 75" stroke="#64748b" stroke-width="2" fill="none"/>
+  <path d="M 680 75 Q 720 100 720 150 Q 720 200 680 250 Q 600 350 400 360 Q 200 350 120 250 Q 80 200 80 150 Q 80 100 120 75 Q 200 50 300 75" stroke="#64748b" stroke-width="2" fill="none" stroke-dasharray="5,3"/>
+  
+  <defs>
+    <marker id="pillarArrow" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#64748b"/>
+    </marker>
+  </defs>
+  
+  <!-- Footer -->
+  <text x="400" y="385" font-family="Arial, sans-serif" font-size="10" text-anchor="middle" fill="#64748b">These pillars support empiricism: making decisions based on observation and experimentation</text>
+</svg>
