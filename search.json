@@ -2,7 +2,7 @@
   {
     "objectID": "index.html",
     "href": "index.html",
-    "title": "Practical Business Analysis",
+    "title": "Preface",
     "section": "",
     "text": "Preface\nWelcome to my companion notes on Business Analysis.",
     "crumbs": [
@@ -12,7 +12,7 @@
   {
     "objectID": "index.html#why-i-wrote-these-notes",
     "href": "index.html#why-i-wrote-these-notes",
-    "title": "Practical Business Analysis",
+    "title": "Preface",
     "section": "Why I Wrote These Notes",
     "text": "Why I Wrote These Notes\nThese notes accompany your primary course materials and textbooks. They serve as a companion resource, offering my perspective on key concepts and providing additional context that complements more comprehensive treatments of the subject matter.\nThink of these notes as my side of a conversation we are having about your future career. I share what I have learned from years of practice, offer stories that illustrate key points, and highlight areas that deserve particular attention as you develop your skills.",
     "crumbs": [
@@ -22,7 +22,7 @@
   {
     "objectID": "index.html#how-to-use-these-notes",
     "href": "index.html#how-to-use-these-notes",
-    "title": "Practical Business Analysis",
+    "title": "Preface",
     "section": "How to Use These Notes",
     "text": "How to Use These Notes\nUse these notes alongside your textbook and course materials. Read the relevant sections before class to prime your thinking. Review them afterward to reinforce what you learned. Return to them when working on assignments and preparing for certification exams.\nI encourage you to write in the margins. Highlight passages that resonate with you. Add your own examples. The most effective learning happens when you actively engage with the material.",
     "crumbs": [
@@ -32,7 +32,7 @@
   {
     "objectID": "index.html#how-these-notes-are-organized",
     "href": "index.html#how-these-notes-are-organized",
-    "title": "Practical Business Analysis",
+    "title": "Preface",
     "section": "How These Notes Are Organized",
     "text": "How These Notes Are Organized\nThe notes follow a logical progression that mirrors how Business Analysis work actually happens in organizations.\nPart I: Foundations introduces you to Business Analysis as a discipline and establishes the fundamental concepts that underpin everything else you will learn.\nPart II: Core Knowledge Areas covers the knowledge areas defined by the Business Analysis Body of Knowledge: strategy analysis, planning and monitoring, elicitation and collaboration, requirements lifecycle management, and requirements analysis and design definition.\nPart III: Agile Practice explores how Business Analysis adapts to Agile environments, with particular emphasis on the Scrum framework that dominates modern software development.\nPart IV: Applied Practice provides hands-on exercises, explores emerging topics like artificial intelligence and data analytics, examines how Business Analysis skills apply across different business disciplines, and concludes with a comprehensive capstone project.",
     "crumbs": [
@@ -42,9 +42,9 @@
   {
     "objectID": "index.html#certification-preparation",
     "href": "index.html#certification-preparation",
-    "title": "Practical Business Analysis",
+    "title": "Preface",
     "section": "Certification Preparation",
-    "text": "Certification Preparation\nThe content in these notes supports preparation for several professional certifications:\n\nECBA (Entry Certificate in Business Analysis) from IIBA\nCCBA (Certification of Capability in Business Analysis) from IIBA\nCBAP (Certified Business Analysis Professional) from IIBA\nPMI-PBA (Professional in Business Analysis) from PMI\n\nEach chapter indicates which certification areas it supports.",
+    "text": "Certification Preparation\nThe content in these notes supports preparation for several professional certifications:\n\nECBA (Entry Certificate in Business Analysis) from IIBA\nCCBA (Certification of Capability in Business Analysis) from IIBA\nCBAP (Certified Business Analysis Professional) from IIBA\n\nEach chapter indicates which certification areas it supports.",
     "crumbs": [
       "Preface"
     ]
@@ -52,7 +52,7 @@
   {
     "objectID": "index.html#a-final-word-before-we-begin",
     "href": "index.html#a-final-word-before-we-begin",
-    "title": "Practical Business Analysis",
+    "title": "Preface",
     "section": "A Final Word Before We Begin",
     "text": "A Final Word Before We Begin\nBusiness Analysis is not just a career path. It is a way of thinking that will serve you regardless of where your professional journey takes you. The ability to understand problems deeply, communicate clearly, and bridge the gap between what people need and what solutions can provide makes you valuable in any role.\nI am genuinely excited to share this material with you. Let us begin.\nDr. Shawn Ogunseye\nYour Instructor",
     "crumbs": [
@@ -64,7 +64,7 @@
     "href": "chapters/01-welcome.html",
     "title": "1  Welcome to Business Analysis",
     "section": "",
-    "text": "1.1 What This Course Is About\nBefore we dive into the material, I want you to know something important: this course was designed with you in mind. Whether you come from a background in finance, accounting, marketing, information systems, or any other business discipline, the skills you learn here will serve you throughout your career.\nI hold a PhD in Information Systems with specializations in Systems Analysis and Design, as well as Data Engineering. My background also includes a BSc and MSc in Computer Science, with over 15 years of experience spanning public sector software development and consultancy work.\nI mention my background not to impress you, but to assure you that what you learn comes from someone who has lived these concepts. Every technique, every framework, every example in this course has been tested in real organizations solving real problems.\nThis course covers four interconnected areas that form the foundation of modern business operations. Business Analysis sits at the center, but you will also learn about the Product Owner role, Scrum Master responsibilities, and Software Testing fundamentals. These roles often work together in organizations, and understanding each one makes you more valuable in any of them.\nBut before we talk about Business Analysis, let me step back and ask a more fundamental question: What exactly is a business?\nA business is any organization engaged in commercial, industrial, or professional activities. This definition covers a lot of ground. The corner coffee shop is a business. So is a multinational bank. A nonprofit hospital is a business. So is a government agency that processes passport applications. What unites all these organizations is that they take inputs, process them in some way, and produce outputs that serve customers or stakeholders.\nThink about this for a moment. Every organization you have ever interacted with, from the university you attend to the streaming service you use to watch movies, follows this basic pattern. They receive something, they do something with it, and they deliver something to someone who values it.",
+    "text": "1.1 What This Course Is About\nBefore we dive into the material, I want you to know something important: this course was designed with you in mind. Whether you come from a background in finance, accounting, marketing, information systems, or any other business discipline, the skills you learn here will serve you throughout your career.\nI hold a PhD in Information Systems with specializations in Systems Analysis and Design. My background also includes a BSc and MSc in Computer Science, with 20 years of experience spanning public sector software development and consultancy work.\nI mention my background not to impress you, but to assure you that what you learn comes from someone who has lived these concepts. Every technique, every framework, every example in this course has been tested in real organizations solving real problems.\nThis course covers four interconnected areas that form the foundation of modern business operations. Business Analysis sits at the center, but you will also learn about the Product Owner role, Scrum Master responsibilities, and Software Testing fundamentals. These roles often work together in organizations, and understanding each one makes you more valuable in any of them.\nBut before we talk about Business Analysis, let me step back and ask a more fundamental question: What exactly is a business?\nA business is any organization engaged in commercial, industrial, or professional activities. This definition covers a lot of ground. The corner coffee shop is a business. So is a multinational bank. A nonprofit hospital is a business. So is a government agency that processes passport applications. What unites all these organizations is that they take inputs, process them in some way, and produce outputs that serve customers or stakeholders.\nThink about this for a moment. Every organization you have ever interacted with, from the university you attend to the streaming service you use to watch movies, follows this basic pattern. They receive something, they do something with it, and they deliver something to someone who values it.",
     "crumbs": [
       "Part I: Foundations",
       "<span class='chapter-number'>1</span>  <span class='chapter-title'>Welcome to Business Analysis</span>"
@@ -1686,9 +1686,29 @@
   {
     "objectID": "index.html#license",
     "href": "index.html#license",
-    "title": "Practical Business Analysis",
+    "title": "Preface",
     "section": "License",
     "text": "License\n© 2025 Dr. Shawn Ogunseye. All rights reserved.\nThis work is licensed under the Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License (CC BY-NC-ND 4.0).\nYou are free to:\n\nShare — copy and redistribute the material in any medium or format\n\nUnder the following terms:\n\nAttribution — You must give appropriate credit, provide a link to the license, and indicate if changes were made.\nNonCommercial — You may not use the material for commercial purposes.\nNoDerivatives — If you remix, transform, or build upon the material, you may not distribute the modified material.\n\nTo view a copy of this license, visit https://creativecommons.org/licenses/by-nc-nd/4.0/",
+    "crumbs": [
+      "Preface"
+    ]
+  },
+  {
+    "objectID": "index.html#stay-connected",
+    "href": "index.html#stay-connected",
+    "title": "Preface",
+    "section": "Stay Connected",
+    "text": "Stay Connected\nFor updates to these notes, additional resources, and insights on building your career in Business Analysis and related fields, visit my website at www.ogunseye.com.\nConnect with me on LinkedIn at www.linkedin.com/in/shawnogunseye where I regularly share perspectives on industry trends, certification preparation tips, and practical advice drawn from ongoing work with organizations and students. Following along keeps you connected to a community of learners and practitioners committed to continuous professional growth.",
+    "crumbs": [
+      "Preface"
+    ]
+  },
+  {
+    "objectID": "index.html#errata",
+    "href": "index.html#errata",
+    "title": "Preface",
+    "section": "Errata",
+    "text": "Errata\nI have made every effort to ensure the accuracy of these notes. However, errors may occasionally slip through. If you discover any mistakes, typos, or areas that need clarification, please let me know through my website at ogunseye.com or via LinkedIn. Your feedback helps improve this resource for future readers, and I appreciate you taking the time to share it.",
     "crumbs": [
       "Preface"
     ]
